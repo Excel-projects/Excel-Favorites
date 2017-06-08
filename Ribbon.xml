@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+
+	<ribbon>
+
+		<tabs>
+			<tab 
+				id="tabFavorites" 
+				getLabel="GetLabelText"
+				insertAfterMso="TabHome"
+				>
+				<group
+					id="grpWorksheet"
+					label="Worksheet"
+					>
+					<button
+						idMso="FileSave"
+						size="large"
+					/>
+					<button
+						idMso="FileSaveAs"
+						size="large"
+					 />
+				</group>
+
+				<group 
+					id="grpEdit" 
+					label="Edit"
+					>
+					<gallery
+					  idMso="Undo"
+					  size="large"
+					/>
+					<button
+						idMso="Copy"
+						size="large"
+					/>
+					<button
+						idMso="Cut"
+						getImage="GetButtonImage"
+						size="large"
+						visible = "false"
+					/>
+					<button
+						id="btnCut"
+						label="Cut"
+						onAction="CutSelection"
+						getImage="GetButtonImage"
+						size="large"
+						screentip="Cut the selection and put it on the clipboard"
+					/>
+					<splitButton
+						idMso="PasteMenu"
+						size="large"
+					/>
+					<button
+						idMso="Spelling"
+						size="large"
+					/>
+				</group>
+
+				<group
+					id="grpPrint"
+					label="Print"
+					>
+					<button
+						idMso="PageSetupSheetDialog"
+						label="Setup"
+						size="large"
+						imageMso="ViewPageLayoutView"
+					/>
+					<button
+						idMso="FilePrintPreview"
+						label="Preview"
+						size="large"
+					/>
+					<button
+						idMso="FilePrint"
+						size="large"
+					/>
+				</group>
+
+				<group
+					id="grpProgram"
+					label="Program"
+					>
+					<button
+						idMso="FileNew"
+						size="large"
+					/>
+					<button
+						idMso="FileOpen"
+						size="large"
+					/>
+					<button
+						idMso="FileClose"
+						size="large"
+					/>
+					<toggleButton
+						idMso="FileProperties"
+						size="large"
+					/>
+					<button
+						idMso="ApplicationOptionsDialog"
+						label="Options" 
+						size="large"
+					/>
+					<button
+						idMso="FileExit"
+						label="Exit"
+						size="large"
+						imageMso="DeclineInvitation"
+					/>
+				</group>
+
+				<group
+					id="grpOptions"
+					label="Options"
+					>
+					<button
+						id="btnSettings"
+						label="Settings"
+						onAction="OpenSettingsForm"
+						getImage="GetButtonImage"
+						size="large"
+						screentip="The settings for this Addin"
+					/>
+					<button
+						idMso="ComAddInsDialog"
+						visible="true"
+						size="large"
+					/>
+				</group>
+				
+				<group
+					id="grpAbout"
+					label="About"
+					>
+					<labelControl
+						id="lblDescription"
+						label="Description: "
+					/>
+					<labelControl
+						id="lblReleaseDate"
+						label="Release Date: "
+					/>
+					<labelControl
+						id="lblCopyright"
+						label="Copyright: "
+					/>
+					<separator
+						id="separator0"
+					/>
+					<labelControl
+						id="txtDescription"
+						getLabel="GetLabelText"
+					/>
+					<labelControl
+						id="txtReleaseDate"
+						getLabel="GetLabelText"
+					/>
+					<labelControl
+						id="txtCopyright"
+						getLabel="GetLabelText"
+					/>
+				</group>
+
+			</tab>
+		</tabs>
+
+	</ribbon>
+
+</customUI>
