@@ -11,3 +11,6 @@ This is an Excel 2010 VSTO Addin written in Visual Studio 2013 VB.Net. It gives 
 |:------------------------------------------|:--------------------------|
 |[Microsoft Visual Studio Community 2017](https://www.visualstudio.com/vs/whatsnew/)|Solution|
 |[Microsoft Excel 2010](https://www.microsoft.com/en-au/software-download/office)|Project|
+
+## Functionality
+This Excel ribbon named “Favorites” is inserted after the “Home” tab when Excel opens.
