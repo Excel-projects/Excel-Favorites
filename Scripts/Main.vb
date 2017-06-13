@@ -9,7 +9,7 @@ Imports System.IO
 Imports System.Reflection
 Imports System.Windows.Forms
 
-Namespace Code
+Namespace Scripts
 
     Module Main
 
@@ -20,7 +20,7 @@ Namespace Code
         ''' </summary>
         ''' <param name="ex">the handled exception</param>
         ''' <param name="silent">show or hide the message</param>
-        Public Sub ErrorMsg(ByRef ex As Exception, Optional ByVal silent As Boolean = False)
+        Public Sub DisplayErrorMessage(ByRef ex As Exception, Optional ByVal silent As Boolean = False)
             Dim sf As New System.Diagnostics.StackFrame(1)
             Dim caller As System.Reflection.MethodBase = sf.GetMethod()
             Dim procedure As String = (caller.Name).Trim
@@ -48,7 +48,7 @@ Namespace Code
                 currentForm.Icon = Icon.FromHandle(bmp.GetHicon)
 
             Catch ex As Exception
-                Call Code.Main.ErrorMsg(ex)
+                Call DisplayErrorMessage(ex)
                 Exit Try
 
             End Try
@@ -93,7 +93,7 @@ Namespace Code
                         End If
                     Next
                 Catch ex As Exception
-                    Call ErrorMsg(ex)
+                    Call DisplayErrorMessage(ex)
                 End Try
             End If
         End Sub

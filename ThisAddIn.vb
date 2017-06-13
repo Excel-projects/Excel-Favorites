@@ -1,4 +1,4 @@
-﻿Imports Favorites.Code
+﻿Imports Favorites.Scripts
  
 Public Class ThisAddIn
 
