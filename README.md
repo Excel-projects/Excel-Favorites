@@ -1,11 +1,11 @@
-<img align="left" src="Images/ReadMe/Excel.png" width="64px" >
+<img align="left" src="Images/ReadMe/App.png" width="64px" >
 
 # Microsoft Excel Favorites Ribbon
 This is an Excel 2010 VSTO Addin written in Visual Studio Community 2017 VB.Net. It gives the user a custom favorites ribbon.
 
 
-<h1 align="center">
-  <img src="Images/toolbar.png" alt="MyToolbar" />
+<h1 align="left">
+  <img src="Images/ReadMe/MicrosoftExcelFavoritesRibbon.png" alt="Ribbon" />
 </h1>
 
 ## Dependencies
