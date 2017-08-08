@@ -239,18 +239,15 @@
   -->
   <ItemGroup>
     <AppDesigner Include="My Project\" />
-    <Compile Include="Scripts\Main.vb" />
+    <Compile Include="Scripts\ErrorHandler.vb" />
+    <Compile Include="Scripts\Form.vb" />
     <Compile Include="Scripts\Ribbon.vb" />
     <Compile Include="TaskPane\Settings.Designer.vb">
-    <Compile Include="Scripts\ErrorHandler.vb" />
-    <Compile Include="Forms\Settings.designer.vb">
       <DependentUpon>Settings.vb</DependentUpon>
     </Compile>
     <Compile Include="TaskPane\Settings.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Scripts\Form.vb" />
-    <Compile Include="Scripts\Ribbon.vb" />
     <Compile Include="ThisAddIn.vb">
       <SubType>Code</SubType>
     </Compile>

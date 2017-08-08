@@ -83,7 +83,7 @@ Namespace Scripts
 				End Select
 
 			Catch ex As Exception
-				Call DisplayErrorMessage(ex)
+				Call DisplayMessage(ex)
 				Return Nothing
 
 			End Try
@@ -114,7 +114,7 @@ Namespace Scripts
 				End Select
 
 			Catch ex As Exception
-				Call DisplayErrorMessage(ex)
+				Call DisplayMessage(ex)
 				'Console.WriteLine(ex.Message.ToString)
 				Return String.Empty
 
@@ -136,7 +136,7 @@ Namespace Scripts
 				Globals.ThisAddIn.Application.Selection.Cut()
 
 			Catch ex As Exception
-				Call DisplayErrorMessage(ex)
+				Call DisplayMessage(ex)
 
 			End Try
 
@@ -166,7 +166,7 @@ Namespace Scripts
 				End If
 
 			Catch ex As Exception
-				Call DisplayErrorMessage(ex)
+				Call DisplayMessage(ex)
 
 			End Try
 
