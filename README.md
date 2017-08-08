@@ -13,10 +13,28 @@ This is an Excel 2010 VSTO Addin written in Visual Studio Community 2017 VB.Net.
 - <a href="#glossary-of-terms">Glossary of Terms</a>
 - <a href="#functionality">Functionality</a>
     - <a href="#worksheet">Worksheet</a>
+         - <a href="#save">Save</a> 
+         - <a href="#save-as">Save As</a> 
     - <a href="#edit">Edit</a>
-    - <a href="#print">Print</a>   
-    - <a href="#program">Program</a>   
-    - <a href="#options">Options</a>   
+         - <a href="#undo">Undo</a> 
+         - <a href="#copy">Copy</a> 
+         - <a href="#cut">Cut</a> 
+         - <a href="#paste">Paste</a> 
+         - <a href="#spelling">Spelling</a> 
+    - <a href="#print-group">Print</a>   
+         - <a href="#setup">Setup</a> 
+         - <a href="#preview">Preview</a> 
+         - <a href="#print">Print</a> 
+    - <a href="#program">Program</a>  
+         - <a href="#new">New</a> 
+         - <a href="#open">Open</a> 
+         - <a href="#close">Close</a> 
+         - <a href="#properties">Properties</a> 
+         - <a href="#options">Options</a> 
+         - <a href="#exit">Exit</a> 
+    - <a href="#options-group">Options</a>  
+         - <a href="#settings">Settings</a> 
+         - <a href="#com-addins">COM Add-Ins</a> 
     - <a href="#about">About</a>
         - <a href="#how-to">How To...</a>  
         - <a href="#api-doc">API Doc...</a>  
@@ -46,78 +64,79 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 
 <a id="user-content-worksheet" class="anchor" href="#worksheet" aria-hidden="true"> </a>
 ### Worksheet (Group)
+<a id="user-content-save" class="anchor" href="#save" aria-hidden="true"> </a>
 #### Save (Button)
+* Save (Ctrl + S)
 
-    Save (Ctrl + S)
-
+<a id="user-content-save-as" class="anchor" href="#save-as" aria-hidden="true"> </a>
 #### Save As (Button)
-
-    Save As (F12)
+* Save As (F12)
 
 <a id="user-content-edit" class="anchor" href="#edit" aria-hidden="true"> </a>
 ### Edit (Group)
+<a id="user-content-undo" class="anchor" href="#undo" aria-hidden="true"> </a>
 #### Undo (Button)
+* Undo (Ctrl + Z)
 
-    Undo (Ctrl + Z)
-
+<a id="user-content-copy" class="anchor" href="#copy" aria-hidden="true"> </a>
 #### Copy (Button)
+* Copy (Ctrl + C)
 
-    Copy (Ctrl + C)
-
+<a id="user-content-cut" class="anchor" href="#cut" aria-hidden="true"> </a>
 #### Cut (Button)
+* Cut (Ctrl + X)
 
-    Cut (Ctrl + X)
-
+<a id="user-content-paste" class="anchor" href="#paste" aria-hidden="true"> </a>
 #### Paste (Button)
+* Paste (Ctrl + V)
 
-    Paste (Ctrl + V)
-
+<a id="user-content-spelling" class="anchor" href="#spelling" aria-hidden="true"> </a>
 #### Spelling (Button)
+* Spelling (F7)
 
-    Spelling (F7)
+<a id="user-content-print-group" class="anchor" href="#print-group" aria-hidden="true"> </a>
+### Print (Group)
+<a id="user-content-setup" class="anchor" href="#setup" aria-hidden="true"> </a>
+#### Setup (Button)
+* Show the Sheet tab of the page setup dialog box
+
+<a id="user-content-preview" class="anchor" href="#preview" aria-hidden="true"> </a>
+#### Preview (Button)
+* Preview (Ctrl + F2)
 
 <a id="user-content-print" class="anchor" href="#print" aria-hidden="true"> </a>
-### Print (Group)
-#### Setup (Button)
-
-    Show the Sheet tab of the page setup dialog box
-
-#### Preview (Button)
-
-    Preview (Ctrl + F2)
-
 #### Print (Button)
-
-    Print (Ctrl + P)
+* Print (Ctrl + P)
 
 <a id="user-content-program" class="anchor" href="#program" aria-hidden="true"> </a>
 ### Program (Group)
+<a id="user-content-new" class="anchor" href="#new" aria-hidden="true"> </a>
 #### New (Button)
+* New file
 
-    New file
-
+<a id="user-content-open" class="anchor" href="#open" aria-hidden="true"> </a>
 #### Open (Button)
+* Open (Ctrl + O)
 
-    Open (Ctrl + O)
-
+<a id="user-content-close" class="anchor" href="#close" aria-hidden="true"> </a>
 #### Close (Button)
+* Close file
 
-    Close file
-
+<a id="user-content-properties" class="anchor" href="#properties" aria-hidden="true"> </a>
 #### Properties (Button)
-
-    Open the properties of the file
-
-#### Options (Button)
-
-    Open the options dialog box
-
-#### Exit (Button)
-
-    Exit the application
+* Open the properties of the file
 
 <a id="user-content-options" class="anchor" href="#options" aria-hidden="true"> </a>
+#### Options (Button)
+* Open the options dialog box
+
+<a id="user-content-exit" class="anchor" href="#exit" aria-hidden="true"> </a>
+#### Exit (Button)
+* Exit the application
+
+<a id="user-content-options-group" class="anchor" href="#options-group" aria-hidden="true"> </a>
 ### Options (Group)
+<a id="user-content-settings" class="anchor" href="#settings" aria-hidden="true"> </a>
 #### Settings (Button)
 
 Types of Settings
@@ -132,6 +151,7 @@ User Settings
     These settings can be changed by the end-user
     They will appear enabled in the form
 
+<a id="user-content-com-addins" class="anchor" href="#com-addins" aria-hidden="true"> </a>
 #### COM Addins (Button)
 
     Manage the available COM Add-ins
