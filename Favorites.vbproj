@@ -239,20 +239,28 @@
   -->
   <ItemGroup>
     <AppDesigner Include="My Project\" />
+    <Compile Include="Scripts\Main.vb" />
+    <Compile Include="Scripts\Ribbon.vb" />
+    <Compile Include="TaskPane\Settings.Designer.vb">
     <Compile Include="Scripts\ErrorHandler.vb" />
     <Compile Include="Forms\Settings.designer.vb">
       <DependentUpon>Settings.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Settings.vb">
-      <SubType>Form</SubType>
+    <Compile Include="TaskPane\Settings.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Scripts\Form.vb" />
     <Compile Include="Scripts\Ribbon.vb" />
     <Compile Include="ThisAddIn.vb">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="TaskPane\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
     <None Include="AnthonyDuguid.pfx" />
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.vb</DependentUpon>
     </None>
@@ -260,9 +268,6 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <EmbeddedResource Include="Forms\Settings.resx">
-      <DependentUpon>Settings.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -296,6 +301,9 @@
     <None Include="Resources\Cut.png" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
   <!-- Include the build rules for a Visual Basic project. -->
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

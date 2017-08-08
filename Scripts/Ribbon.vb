@@ -1,17 +1,6 @@
-﻿
-#Region "  Authors / Credit  "
-'--------------------------------------------------------------------------------------------------------------------
-' Purpose:  To create a standard of favorites for Office
-'
-' Ver.  Date            Author              Details
-' 1.00  11-Aug-2014     Anthony Duguid      initial version 
-'--------------------------------------------------------------------------------------------------------------------
-#End Region
-
-Option Strict Off
+﻿Option Strict Off
 Option Explicit On
 
-Imports Favorites.Forms
 Imports System.Windows.Forms
 Imports System.Environment
 
@@ -25,6 +14,9 @@ Namespace Scripts
 	Public Class Ribbon
 		Implements Office.IRibbonExtensibility
 		Private ribbon As Office.IRibbonUI
+
+		Public mySettings As Favorites.TaskPane.Settings
+		Public myTaskPaneSettings As Microsoft.Office.Tools.CustomTaskPane
 
 #Region "| IRibbonExtensibility Members |"
 
@@ -91,7 +83,7 @@ Namespace Scripts
 				End Select
 
 			Catch ex As Exception
-				Call DisplayMessage(ex)
+				Call DisplayErrorMessage(ex)
 				Return Nothing
 
 			End Try
@@ -122,7 +114,7 @@ Namespace Scripts
 				End Select
 
 			Catch ex As Exception
-				Call DisplayMessage(ex)
+				Call DisplayErrorMessage(ex)
 				'Console.WriteLine(ex.Message.ToString)
 				Return String.Empty
 
@@ -144,7 +136,7 @@ Namespace Scripts
 				Globals.ThisAddIn.Application.Selection.Cut()
 
 			Catch ex As Exception
-				Call DisplayMessage(ex)
+				Call DisplayErrorMessage(ex)
 
 			End Try
 
@@ -157,11 +149,24 @@ Namespace Scripts
 		''' <remarks></remarks>
 		Public Sub OpenSettingsForm(ByVal control As Office.IRibbonControl)
 			Try
-				Dim formSettings As New Settings
-				formSettings.ShowDialog()
+				If myTaskPaneSettings IsNot Nothing Then
+					If myTaskPaneSettings.Visible = True Then
+						myTaskPaneSettings.Visible = False
+					Else
+						myTaskPaneSettings.Visible = True
+					End If
+				Else
+					MySettings = New Favorites.TaskPane.Settings()
+					myTaskPaneSettings = Globals.ThisAddIn.CustomTaskPanes.Add(MySettings, "Settings for " + My.Application.Info.Title)
+					myTaskPaneSettings.DockPosition = Office.MsoCTPDockPosition.msoCTPDockPositionRight
+					myTaskPaneSettings.DockPositionRestrict = Office.MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange
+					myTaskPaneSettings.Width = 675
+					myTaskPaneSettings.Visible = True
+
+				End If
 
 			Catch ex As Exception
-				Call DisplayMessage(ex)
+				Call DisplayErrorMessage(ex)
 
 			End Try
 
