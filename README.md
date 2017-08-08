@@ -138,23 +138,17 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 ### Options (Group)
 <a id="user-content-settings" class="anchor" href="#settings" aria-hidden="true"> </a>
 #### Settings (Button)
-
-Types of Settings
-
-Application Settings
-
-    These settings can only be changed in the project and need to be redeployed
-    They will appear disabled in the form
-
-User Settings
-
-    These settings can be changed by the end-user
-    They will appear enabled in the form
+- Types of Settings
+  - Application Settings
+    - These settings can only be changed in the project and need to be redeployed
+    - They will appear disabled in the form
+  - User Settings
+    - These settings can be changed by the end-user
+    - They will appear enabled in the form
 
 <a id="user-content-com-addins" class="anchor" href="#com-addins" aria-hidden="true"> </a>
 #### COM Addins (Button)
-
-    Manage the available COM Add-ins
+* Manage the available COM Add-ins
 
 <a id="user-content-about" class="anchor" href="#about" aria-hidden="true"> </a>
 ### About (Group)
