@@ -4,7 +4,7 @@ Option Explicit On
 Imports System.Windows.Forms
 Imports System.Reflection
 
-Namespace Favorites.TaskPane
+Namespace TaskPane
 	''' <summary>
 	''' Settings TaskPane
 	''' </summary>
@@ -21,25 +21,25 @@ Namespace Favorites.TaskPane
 		Friend WithEvents pgdSettings As PropertyGrid
 
 		Private Sub InitializeComponent()
-		Me.pgdSettings = New System.Windows.Forms.PropertyGrid()
-		Me.SuspendLayout
-		'
-		'pgdSettings
-		'
-		Me.pgdSettings.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.pgdSettings.Location = New System.Drawing.Point(0, 0)
-		Me.pgdSettings.Name = "pgdSettings"
-		Me.pgdSettings.Size = New System.Drawing.Size(650, 750)
-		Me.pgdSettings.TabIndex = 0
-		'
-		'Settings
-		'
-		Me.Controls.Add(Me.pgdSettings)
-		Me.Name = "Settings"
-		Me.Size = New System.Drawing.Size(650, 750)
-		Me.ResumeLayout(false)
+			Me.pgdSettings = New System.Windows.Forms.PropertyGrid()
+			Me.SuspendLayout()
+			'
+			'pgdSettings
+			'
+			Me.pgdSettings.Dock = System.Windows.Forms.DockStyle.Fill
+			Me.pgdSettings.Location = New System.Drawing.Point(0, 0)
+			Me.pgdSettings.Name = "pgdSettings"
+			Me.pgdSettings.Size = New System.Drawing.Size(650, 750)
+			Me.pgdSettings.TabIndex = 0
+			'
+			'Settings
+			'
+			Me.Controls.Add(Me.pgdSettings)
+			Me.Name = "Settings"
+			Me.Size = New System.Drawing.Size(650, 750)
+			Me.ResumeLayout(False)
 
-End Sub
+		End Sub
 
 		''' <summary> 
 		''' Sets the column width of a property grid 
@@ -74,6 +74,7 @@ End Sub
 		''' </summary>
 		''' <param name="s">contains the sender of the event, so if you had one method bound to multiple controls, you can distinguish them.</param>
 		''' <param name="e">refers to the event arguments for the used event, they usually come in the form of properties/functions/methods that get to be available on it.</param>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>
 		Private Sub pgdSettings_PropertyValueChanged(s As Object, e As PropertyValueChangedEventArgs)
 			'Scripts.Ribbon.ribbonref.InvalidateRibbon()
 		End Sub

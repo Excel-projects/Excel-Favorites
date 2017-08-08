@@ -94,24 +94,27 @@ Partial Public NotInheritable Class ThisAddIn
     Private Sub BindToData()
     End Sub
 
-    '''
-    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-     Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
-    Private Sub StartCaching(ByVal MemberName As String)
+	'''
+	<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>
+	<Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+	 Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>
+	Private Sub StartCaching(ByVal MemberName As String)
         Me.DataHost.StartCaching(Me, MemberName)
     End Sub
 
-    '''
-    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-     Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
-    Private Sub StopCaching(ByVal MemberName As String)
+	'''
+	<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>
+	<Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+	 Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>
+	Private Sub StopCaching(ByVal MemberName As String)
         Me.DataHost.StopCaching(Me, MemberName)
     End Sub
 
-    '''
-    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-     Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
-    Private Function IsCached(ByVal MemberName As String) As Boolean
+	'''
+	<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>
+	<Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+	 Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>
+	Private Function IsCached(ByVal MemberName As String) As Boolean
         Return Me.DataHost.IsCached(Me, MemberName)
     End Function
 
@@ -151,10 +154,11 @@ Partial Public NotInheritable Class ThisAddIn
     Private Sub InitializeComponents()
     End Sub
 
-    '''
-    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-     Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
-    Private Function NeedsFill(ByVal MemberName As String) As Boolean
+	'''
+	<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>
+	<Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+	 Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>
+	Private Function NeedsFill(ByVal MemberName As String) As Boolean
         Return Me.DataHost.NeedsFill(Me, MemberName)
     End Function
 

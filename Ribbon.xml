@@ -158,7 +158,7 @@
 					/>
           <labelControl
 						id="lblDescription"
-						label="Description: "
+						label="Add-In Name:"
 					/>
           <labelControl
 						id="lblReleaseDate"

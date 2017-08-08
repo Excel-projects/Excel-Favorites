@@ -12,18 +12,18 @@ Namespace Scripts
 		''' Global error message for all procedures
 		''' </summary>
 		''' <param name="ex">the handled exception</param>
-		''' <param name="silent">show or hide the message</param>
-		Public Sub DisplayMessage(ByRef ex As Exception, Optional ByVal silent As Boolean = False)
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId:="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)")>
+		Public Sub DisplayMessage(ByRef ex As Exception)
+			Dim caption As String = "Unexpected Error"
 			Dim sf As New System.Diagnostics.StackFrame(1)
 			Dim caller As System.Reflection.MethodBase = sf.GetMethod()
 			Dim procedure As String = (caller.Name).Trim
 			Dim msg As String = "Contact your system administrator."
 			msg += NewLine & "Procedure: " & procedure
 			msg += NewLine & "Description: " & ex.ToString
-			Console.WriteLine(msg)
-			If silent = False Then
-				MessageBox.Show(msg, "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-			End If
+			'Console.WriteLine(msg)
+			MessageBox.Show(msg, caption, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
 		End Sub
 

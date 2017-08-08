@@ -1,4 +1,5 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses")>
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Settings
 	Inherits System.Windows.Forms.UserControl
 

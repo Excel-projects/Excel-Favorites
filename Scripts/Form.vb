@@ -16,6 +16,8 @@ Namespace Scripts
 		''' </summary>
 		''' <param name="currentForm">the current form object</param>
 		''' <param name="bmp">the icon referenced for the form</param>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
 		Public Sub SetIcon(ByRef currentForm As System.Windows.Forms.Form, ByRef bmp As Bitmap)
 			Try
 				currentForm.Icon = Icon.FromHandle(bmp.GetHicon)
@@ -35,6 +37,9 @@ Namespace Scripts
 		''' <remarks>
 		''' only run if deployed 
 		''' </remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1305:SpecifyIFormatProvider", MessageId:="System.Convert.ToString(System.String)")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
 		Public Sub SetAddRemoveProgramsIcon(iconName As String)
 			If System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed AndAlso ApplicationDeployment.CurrentDeployment.IsFirstRun Then
 				Try

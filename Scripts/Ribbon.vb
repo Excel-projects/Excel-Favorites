@@ -10,10 +10,11 @@ Namespace Scripts
 	<Runtime.InteropServices.ComVisible(True)>
 	Public Class Ribbon
 		Implements Office.IRibbonExtensibility
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")>
 		Private ribbon As Office.IRibbonUI
 
-		Public mySettings As Favorites.TaskPane.Settings
-		Public myTaskPaneSettings As Microsoft.Office.Tools.CustomTaskPane
+		Private mySettings As TaskPane.Settings
+		Private myTaskPaneSettings As Microsoft.Office.Tools.CustomTaskPane
 
 #Region "| Ribbon Events |"
 
@@ -29,6 +30,7 @@ Namespace Scripts
 		''' <param name="ribbonID">Represents the XML customization file</param>
 		''' <returns>A method that returns a bitmap image for the control id.</returns>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1725:ParameterNamesShouldMatchBaseDeclaration", MessageId:="0#")>
 		Public Function GetCustomUI(ByVal ribbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
 			Return GetResourceText("Favorites.Ribbon.xml")
 		End Function
@@ -58,6 +60,7 @@ Namespace Scripts
 		''' </summary>
 		''' <param name="ribbonUI">Represents the IRibbonUI instance that is provided by the Microsoft Office application to the Ribbon extensibility code.</param>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1707:IdentifiersShouldNotContainUnderscores")>
 		Public Sub Ribbon_Load(ByVal ribbonUI As Office.IRibbonUI)
 			Me.ribbon = ribbonUI
 		End Sub
@@ -68,6 +71,8 @@ Namespace Scripts
 		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
 		''' <returns>A method that returns a bitmap image for the control id.</returns>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId:="0")>
 		Public Function GetButtonImage(ByVal control As Office.IRibbonControl) As System.Drawing.Bitmap
 			Try
 				Select Case control.Id.ToString
@@ -93,6 +98,9 @@ Namespace Scripts
 		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
 		''' <returns>A method that returns a string for a label. </returns>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1305:SpecifyIFormatProvider", MessageId:="System.DateTime.ToString(System.String)")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId:="0")>
 		Public Function GetLabelText(ByVal control As Office.IRibbonControl) As String
 			Try
 				Select Case control.Id.ToString
@@ -128,6 +136,8 @@ Namespace Scripts
 		''' </summary>
 		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId:="control")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
 		Public Sub CutSelection(ByVal control As Office.IRibbonControl)
 			Try
 				Globals.ThisAddIn.Application.Selection.Cut()
@@ -144,6 +154,8 @@ Namespace Scripts
 		''' </summary>
 		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId:="control")>
 		Public Sub OpenSettingsForm(ByVal control As Office.IRibbonControl)
 			Try
 				If myTaskPaneSettings IsNot Nothing Then
@@ -174,6 +186,8 @@ Namespace Scripts
 		''' </summary>
 		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId:="control")>
 		Public Sub OpenHelpAsBuiltFile(ByVal control As Office.IRibbonControl)
 			Try
 				Call OpenFile(My.Settings.App_PathReadMe)
@@ -194,6 +208,7 @@ Namespace Scripts
 		''' </summary>
 		''' <param name="fileName">The selected file to open</param>
 		''' <remarks></remarks>
+		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
 		Public Sub OpenFile(ByVal fileName As String)
 			Dim pStart As New System.Diagnostics.Process
 			Try
@@ -210,7 +225,7 @@ Namespace Scripts
 				Exit Try
 
 			Finally
-				pStart = Nothing
+				pStart.Dispose()
 
 			End Try
 

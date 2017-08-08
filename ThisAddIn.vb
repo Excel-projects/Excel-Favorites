@@ -6,12 +6,14 @@ Public Class ThisAddIn
         Return New Ribbon()
     End Function
 
-    Private Sub ThisAddIn_Startup() Handles Me.Startup
+	<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")>
+	Private Sub ThisAddIn_Startup() Handles Me.Startup
 
-    End Sub
+	End Sub
 
-    Private Sub ThisAddIn_Shutdown() Handles Me.Shutdown
+	<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")>
+	Private Sub ThisAddIn_Shutdown() Handles Me.Shutdown
 
-    End Sub
+	End Sub
 
 End Class
