@@ -1,5 +1,5 @@
-﻿Imports Favorites.Code
- 
+﻿Imports Favorites.Scripts
+
 Public Class ThisAddIn
 
     Protected Overrides Function CreateRibbonExtensibilityObject() As Microsoft.Office.Core.IRibbonExtensibility

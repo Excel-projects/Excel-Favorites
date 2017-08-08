@@ -2,7 +2,7 @@
 Option Explicit On
 
 Imports System.Windows.Forms
-Imports Favorites.Code
+Imports Favorites.Scripts
 Imports System.Reflection
 
 Namespace Forms
@@ -23,8 +23,8 @@ Namespace Forms
             Try
                 Me.pgdSettings.SelectedObject = My.Settings
                 Call SetLabelColumnWidth(Me.pgdSettings, 200)
-                Call SetFormIcon(Me, My.Resources.Settings)
-                Dim strVersion As String = My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor & "." & My.Application.Info.Version.Build & "." & My.Application.Info.Version.Revision
+				Call SetIcon(Me, My.Resources.Settings)
+				Dim strVersion As String = My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor & "." & My.Application.Info.Version.Build & "." & My.Application.Info.Version.Revision
                 Me.Text = "Settings for " & My.Application.Info.Title.ToString.Replace("&", "&&") & Space(1) & strVersion
 
                 ''Only show "user" settings
@@ -33,8 +33,8 @@ Namespace Forms
                 'pgdSettings.BrowsableAttributes = attrs
 
             Catch ex As Exception
-                Call ErrorMsg(ex)
-                Exit Try
+				Call DisplayMessage(ex)
+				Exit Try
 
             End Try
 
@@ -51,8 +51,8 @@ Namespace Forms
                 My.Settings.Save()
 
             Catch ex As Exception
-                Call ErrorMsg(ex)
-                Exit Try
+				Call DisplayMessage(ex)
+				Exit Try
 
             End Try
 
@@ -87,8 +87,8 @@ Namespace Forms
                 mi.Invoke(view, New Object() {width})
 
             Catch ex As Exception
-                Call ErrorMsg(ex)
-                Exit Try
+				Call DisplayMessage(ex)
+				Exit Try
 
             End Try
         End Sub

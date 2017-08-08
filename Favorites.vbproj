@@ -239,14 +239,15 @@
   -->
   <ItemGroup>
     <AppDesigner Include="My Project\" />
-    <Compile Include="Code\Main.vb" />
+    <Compile Include="Scripts\ErrorHandler.vb" />
     <Compile Include="Forms\Settings.designer.vb">
       <DependentUpon>Settings.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Settings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\Ribbon.vb" />
+    <Compile Include="Scripts\Form.vb" />
+    <Compile Include="Scripts\Ribbon.vb" />
     <Compile Include="ThisAddIn.vb">
       <SubType>Code</SubType>
     </Compile>
