@@ -1,47 +1,47 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
 
-	<ribbon>
+  <ribbon>
 
-		<tabs>
-			<tab 
-				id="tabFavorites" 
+    <tabs>
+      <tab
+				id="tabFavorites"
 				getLabel="GetLabelText"
 				insertAfterMso="TabHome"
 				>
-				<group
+        <group
 					id="grpWorksheet"
 					label="Worksheet"
 					>
-					<button
+          <button
 						idMso="FileSave"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="FileSaveAs"
 						size="large"
 					 />
-				</group>
+        </group>
 
-				<group 
-					id="grpEdit" 
+        <group
+					id="grpEdit"
 					label="Edit"
 					>
-					<gallery
+          <gallery
 					  idMso="Undo"
 					  size="large"
 					/>
-					<button
+          <button
 						idMso="Copy"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="Cut"
 						getImage="GetButtonImage"
 						size="large"
 						visible = "false"
 					/>
-					<button
+          <button
 						id="btnCut"
 						label="Cut"
 						onAction="CutSelection"
@@ -49,75 +49,75 @@
 						size="large"
 						screentip="Cut the selection and put it on the clipboard"
 					/>
-					<splitButton
+          <splitButton
 						idMso="PasteMenu"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="Spelling"
 						size="large"
 					/>
-				</group>
+        </group>
 
-				<group
+        <group
 					id="grpPrint"
 					label="Print"
 					>
-					<button
+          <button
 						idMso="PageSetupSheetDialog"
 						label="Setup"
 						size="large"
 						imageMso="ViewPageLayoutView"
 					/>
-					<button
+          <button
 						idMso="FilePrintPreview"
 						label="Preview"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="FilePrint"
 						size="large"
 					/>
-				</group>
+        </group>
 
-				<group
+        <group
 					id="grpProgram"
 					label="Program"
 					>
-					<button
+          <button
 						idMso="FileNew"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="FileOpen"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="FileClose"
 						size="large"
 					/>
-					<toggleButton
+          <toggleButton
 						idMso="FileProperties"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="ApplicationOptionsDialog"
-						label="Options" 
+						label="Options"
 						size="large"
 					/>
-					<button
+          <button
 						idMso="FileExit"
 						label="Exit"
 						size="large"
 						imageMso="DeclineInvitation"
 					/>
-				</group>
+        </group>
 
-				<group
+        <group
 					id="grpOptions"
 					label="Options"
 					>
-					<button
+          <button
 						id="btnSettings"
 						label="Settings"
 						onAction="OpenSettingsForm"
@@ -125,49 +125,69 @@
 						size="large"
 						screentip="The settings for this Addin"
 					/>
-					<button
+          <button
 						idMso="ComAddInsDialog"
 						visible="true"
 						size="large"
 					/>
-				</group>
-				
-				<group
+        </group>
+
+        <group
 					id="grpAbout"
 					label="About"
 					>
-					<labelControl
+          <button
+            id="btnHelpAsBuilt"
+            label="How To...   "
+            onAction="OpenHelpAsBuiltFile"
+            imageMso="Help"
+            size="normal"
+            screentip="How to use this Excel Add-In"
+					/>
+          <button
+						id="btnHelpApi"
+						label="API Doc...   "
+						onAction="OpenHelpApiFile"
+						imageMso="CategoryCollapse"
+						size="normal"
+            enabled="false"
+						screentip="View API documentation for this product"
+					/>
+          <separator
+						id="separator4"
+					/>
+          <labelControl
 						id="lblDescription"
 						label="Description: "
 					/>
-					<labelControl
+          <labelControl
 						id="lblReleaseDate"
 						label="Release Date: "
 					/>
-					<labelControl
+          <labelControl
 						id="lblCopyright"
 						label="Copyright: "
 					/>
-					<separator
+          <separator
 						id="separator0"
 					/>
-					<labelControl
+          <labelControl
 						id="txtDescription"
 						getLabel="GetLabelText"
 					/>
-					<labelControl
+          <labelControl
 						id="txtReleaseDate"
 						getLabel="GetLabelText"
 					/>
-					<labelControl
+          <labelControl
 						id="txtCopyright"
 						getLabel="GetLabelText"
 					/>
-				</group>
+        </group>
 
-			</tab>
-		</tabs>
+      </tab>
+    </tabs>
 
-	</ribbon>
+  </ribbon>
 
 </customUI>

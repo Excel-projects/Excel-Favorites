@@ -2,8 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="Author" Type="System.String" Scope="Application">
+    <Setting Name="App_Author" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Anthony Duguid</Value>
+    </Setting>
+    <Setting Name="App_PathReadMe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/README.md</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,9 +1,6 @@
 ﻿Option Strict Off
 Option Explicit On
 
-Imports System.Windows.Forms
-Imports System.Environment
-
 Namespace Scripts
 
 	''' <summary>
@@ -18,8 +15,11 @@ Namespace Scripts
 		Public mySettings As Favorites.TaskPane.Settings
 		Public myTaskPaneSettings As Microsoft.Office.Tools.CustomTaskPane
 
-#Region "| IRibbonExtensibility Members |"
+#Region "| Ribbon Events |"
 
+		''' <summary>
+		''' 
+		''' </summary>
 		Public Sub New()
 		End Sub
 
@@ -33,10 +33,11 @@ Namespace Scripts
 			Return GetResourceText("Favorites.Ribbon.xml")
 		End Function
 
-#End Region
-
-#Region "| Helpers |"
-
+		''' <summary>
+		''' 
+		''' </summary>
+		''' <param name="resourceName"></param>
+		''' <returns></returns>
 		Private Shared Function GetResourceText(ByVal resourceName As String) As String
 			Dim asm As Reflection.Assembly = Reflection.Assembly.GetExecutingAssembly()
 			Dim resourceNames() As String = asm.GetManifestResourceNames()
@@ -51,10 +52,6 @@ Namespace Scripts
 			Next
 			Return Nothing
 		End Function
-
-#End Region
-
-#Region "| Ribbon Events |"
 
 		''' <summary>
 		''' Load the ribbon
@@ -156,8 +153,8 @@ Namespace Scripts
 						myTaskPaneSettings.Visible = True
 					End If
 				Else
-					MySettings = New Favorites.TaskPane.Settings()
-					myTaskPaneSettings = Globals.ThisAddIn.CustomTaskPanes.Add(MySettings, "Settings for " + My.Application.Info.Title)
+					mySettings = New Favorites.TaskPane.Settings()
+					myTaskPaneSettings = Globals.ThisAddIn.CustomTaskPanes.Add(mySettings, "Settings for " + My.Application.Info.Title)
 					myTaskPaneSettings.DockPosition = Office.MsoCTPDockPosition.msoCTPDockPositionRight
 					myTaskPaneSettings.DockPositionRestrict = Office.MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange
 					myTaskPaneSettings.Width = 675
@@ -167,6 +164,53 @@ Namespace Scripts
 
 			Catch ex As Exception
 				Call DisplayMessage(ex)
+
+			End Try
+
+		End Sub
+
+		''' <summary>
+		''' show the read me file
+		''' </summary>
+		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
+		''' <remarks></remarks>
+		Public Sub OpenHelpAsBuiltFile(ByVal control As Office.IRibbonControl)
+			Try
+				Call OpenFile(My.Settings.App_PathReadMe)
+
+			Catch ex As Exception
+				Call DisplayMessage(ex)
+
+			End Try
+
+		End Sub
+
+#End Region
+
+#Region "| Subroutines |"
+
+		''' <summary>
+		''' open a file from the source list
+		''' </summary>
+		''' <param name="fileName">The selected file to open</param>
+		''' <remarks></remarks>
+		Public Sub OpenFile(ByVal fileName As String)
+			Dim pStart As New System.Diagnostics.Process
+			Try
+				If fileName = String.Empty Then Exit Try
+				pStart.StartInfo.FileName = fileName
+				pStart.Start()
+
+			Catch ex As System.ComponentModel.Win32Exception
+				'MessageBox.Show("No application is assicated to this file type." & vbCrLf & vbCrLf & pstrFile, "No action taken.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+				Exit Try
+
+			Catch ex As Exception
+				Call DisplayMessage(ex)
+				Exit Try
+
+			Finally
+				pStart = Nothing
 
 			End Try
 

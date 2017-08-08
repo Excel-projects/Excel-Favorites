@@ -56,10 +56,22 @@ Partial Friend NotInheritable Class MySettings
     <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("Anthony Duguid")>  _
-    Public ReadOnly Property Author() As String
+    Public ReadOnly Property App_Author() As String
         Get
-            Return CType(Me("Author"),String)
+            Return CType(Me("App_Author"),String)
         End Get
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/README.md")>  _
+    Public Property App_PathReadMe() As String
+        Get
+            Return CType(Me("App_PathReadMe"),String)
+        End Get
+        Set
+            Me("App_PathReadMe") = value
+        End Set
     End Property
 End Class
 
