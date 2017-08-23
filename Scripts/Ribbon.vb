@@ -104,9 +104,13 @@ Namespace Scripts
 		Public Function GetLabelText(ByVal control As Office.IRibbonControl) As String
 			Try
 				Select Case control.Id.ToString
-					Case Is = "tabFavorites"
-						Return My.Application.Info.Title
-					Case Is = "txtCopyright"
+                    Case Is = "tabFavorites"
+                        If My.Application.Info.Version.ToString.Substring(0, 2) = "15" Then
+                            Return My.Application.Info.Title.ToUpper()
+                        Else
+                            Return My.Application.Info.Title
+                        End If
+                    Case Is = "txtCopyright"
 						Return "© " & My.Application.Info.Copyright.ToString
 					Case Is = "txtDescription"
 						Dim strVersion As String = My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor & "." & My.Application.Info.Version.Build & "." & My.Application.Info.Version.Revision
