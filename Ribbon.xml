@@ -12,6 +12,7 @@
         <group
 					id="grpWorksheet"
 					label="Worksheet"
+          imageMso="FileSave"
 					>
           <button
 						idMso="FileSave"
@@ -26,6 +27,7 @@
         <group
 					id="grpEdit"
 					label="Edit"
+          imageMso="Undo"
 					>
           <gallery
 					  idMso="Undo"
@@ -36,16 +38,10 @@
 						size="large"
 					/>
           <button
-						idMso="Cut"
-						getImage="GetButtonImage"
-						size="large"
-						visible = "false"
-					/>
-          <button
 						id="btnCut"
 						label="Cut"
 						onAction="CutSelection"
-						getImage="GetButtonImage"
+						imageMso="Cut"
 						size="large"
 						screentip="Cut the selection and put it on the clipboard"
 					/>
@@ -62,6 +58,7 @@
         <group
 					id="grpPrint"
 					label="Print"
+          imageMso="FilePrint"
 					>
           <button
 						idMso="PageSetupSheetDialog"
@@ -83,6 +80,7 @@
         <group
 					id="grpProgram"
 					label="Program"
+          imageMso="FileNew"
 					>
           <button
 						idMso="FileNew"
@@ -116,12 +114,13 @@
         <group
 					id="grpOptions"
 					label="Options"
+          imageMso="PropertySheet"
 					>
           <button
 						id="btnSettings"
 						label="Settings"
 						onAction="OpenSettingsForm"
-						getImage="GetButtonImage"
+						imageMso="PropertySheet"
 						size="large"
 						screentip="The settings for this Addin"
 					/>
@@ -135,6 +134,7 @@
         <group
 					id="grpAbout"
 					label="About"
+          imageMso="Help"
 					>
           <button
             id="btnHelpAsBuilt"
@@ -167,9 +167,6 @@
           <labelControl
 						id="lblCopyright"
 						label="Copyright: "
-					/>
-          <separator
-						id="separator0"
 					/>
           <labelControl
 						id="txtDescription"

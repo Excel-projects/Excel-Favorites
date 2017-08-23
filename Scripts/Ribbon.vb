@@ -57,50 +57,23 @@ Namespace Scripts
 			Return Nothing
 		End Function
 
-		''' <summary>
-		''' Load the ribbon
-		''' </summary>
-		''' <param name="ribbonUI">Represents the IRibbonUI instance that is provided by the Microsoft Office application to the Ribbon extensibility code.</param>
-		''' <remarks></remarks>
-		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1707:IdentifiersShouldNotContainUnderscores")>
-		Public Sub Ribbon_Load(ByVal ribbonUI As Office.IRibbonUI)
-			Me.ribbon = ribbonUI
-		End Sub
+        ''' <summary>
+        ''' Load the ribbon
+        ''' </summary>
+        ''' <param name="ribbonUI">Represents the IRibbonUI instance that is provided by the Microsoft Office application to the Ribbon extensibility code.</param>
+        ''' <remarks></remarks>
+        <Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1707:IdentifiersShouldNotContainUnderscores")>
+        Public Sub Ribbon_Load(ByVal ribbonUI As Office.IRibbonUI)
+            Me.ribbon = ribbonUI
+        End Sub
 
-		''' <summary>
-		'''To assign a images to the controls on the ribbon in the xml file
-		''' </summary>
-		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
-		''' <returns>A method that returns a bitmap image for the control id.</returns>
-		''' <remarks></remarks>
-		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
-		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId:="0")>
-		Public Function GetButtonImage(ByVal control As Office.IRibbonControl) As System.Drawing.Bitmap
-			Try
-				Select Case control.Id.ToString
-					Case Is = "btnSettings"
-						Return My.Resources.Resources.Settings
-					Case Is = "btnCut"
-						Return My.Resources.Resources.Cut
-					Case Else
-						Return Nothing
-				End Select
-
-			Catch ex As Exception
-				Call DisplayMessage(ex)
-				Return Nothing
-
-			End Try
-
-		End Function
-
-		''' <summary>
-		''' To assign text to controls on the ribbon from the xml file
-		''' </summary>
-		''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
-		''' <returns>A method that returns a string for a label. </returns>
-		''' <remarks></remarks>
-		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1305:SpecifyIFormatProvider", MessageId:="System.DateTime.ToString(System.String)")>
+        ''' <summary>
+        ''' To assign text to controls on the ribbon from the xml file
+        ''' </summary>
+        ''' <param name="control">Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.</param>
+        ''' <returns>A method that returns a string for a label. </returns>
+        ''' <remarks></remarks>
+        <Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1305:SpecifyIFormatProvider", MessageId:="System.DateTime.ToString(System.String)")>
 		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")>
 		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId:="0")>
 		Public Function GetLabelText(ByVal control As Office.IRibbonControl) As String
