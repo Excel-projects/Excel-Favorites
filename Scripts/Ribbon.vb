@@ -1,6 +1,8 @@
 ﻿Option Strict Off
 Option Explicit On
 
+Imports System.Windows.Forms
+
 Namespace Scripts
 
 	''' <summary>
@@ -105,7 +107,7 @@ Namespace Scripts
 			Try
 				Select Case control.Id.ToString
                     Case Is = "tabFavorites"
-                        If My.Application.Info.Version.ToString.Substring(0, 2) = "15" Then
+                        If Application.ProductVersion.Substring(0, 2) = "15" Then
                             Return My.Application.Info.Title.ToUpper()
                         Else
                             Return My.Application.Info.Title
