@@ -159,26 +159,32 @@
           <labelControl
 						id="lblDescription"
 						label="Add-In Name:"
+            getEnabled="False"
 					/>
           <labelControl
-						id="lblReleaseDate"
-						label="Release Date: "
+						id="lblInstallDate"
+						label="Install Date: "
+            getEnabled="False"
 					/>
           <labelControl
 						id="lblCopyright"
 						label="Copyright: "
+            getEnabled="False"
 					/>
           <labelControl
 						id="txtDescription"
 						getLabel="GetLabelText"
+            getEnabled="False"
 					/>
           <labelControl
 						id="txtReleaseDate"
 						getLabel="GetLabelText"
+            getEnabled="False"
 					/>
           <labelControl
 						id="txtCopyright"
 						getLabel="GetLabelText"
+            getEnabled="False"
 					/>
         </group>
 
