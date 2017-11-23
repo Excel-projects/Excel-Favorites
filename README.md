@@ -1,9 +1,14 @@
 <img align="left" src="Images/ReadMe/App.png" width="64px" >
 
 # Microsoft Excel Favorites Ribbon
+
+![current_build Office_2010](https://img.shields.io/badge/current_build-Office_2010-red.svg)
+
 This is an Excel 2010 VSTO Addin written in Visual Studio Community 2017 VB.Net. It gives the user a custom favorites ribbon.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
+[![star this repo](http://githubbadges.com/star.svg?user=aduguid&repo=MicrosoftExcelFavorites&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftExcelFavorites)
+[![fork this repo](http://githubbadges.com/fork.svg?user=aduguid&repo=MicrosoftExcelFavorites&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftExcelFavorites/fork)
 
 <h1 align="left">
   <img src="Images/ReadMe/MicrosoftExcelFavoritesRibbon.png" alt="Ribbon" />
