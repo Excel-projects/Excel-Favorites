@@ -6,27 +6,20 @@ Imports System.Windows.Forms
 
 Namespace Scripts
 
-	Module ErrorHandler
+        Public Class ErrorHandler
 
-		''' <summary> 
-		''' Global error message for all procedures
-		''' </summary>
-		''' <param name="ex">the handled exception</param>
-		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")>
-		<Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId:="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)")>
-		Public Sub DisplayMessage(ByRef ex As Exception)
-			Dim caption As String = "Unexpected Error"
-			Dim sf As New System.Diagnostics.StackFrame(1)
-			Dim caller As System.Reflection.MethodBase = sf.GetMethod()
-			Dim procedure As String = (caller.Name).Trim
-			Dim msg As String = "Contact your system administrator."
-			msg += NewLine & "Procedure: " & procedure
-			msg += NewLine & "Description: " & ex.ToString
-			'Console.WriteLine(msg)
-			MessageBox.Show(msg, caption, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Public Shared Sub DisplayMessage(ex As Exception)
+                Dim sf As New System.Diagnostics.StackFrame(1)
+                Dim caller As System.Reflection.MethodBase = sf.GetMethod()
+                Dim currentProcedure As String = (caller.Name).Trim()
+                Dim errorMessageDescription As String = ex.ToString()
+                errorMessageDescription = System.Text.RegularExpressions.Regex.Replace(errorMessageDescription, "\r\n+", " ")
+                Dim msg As String = "Contact your system administrator. A record has been created in the log file." + Environment.NewLine
+                msg += (Convert.ToString("Procedure: ") & currentProcedure) + Environment.NewLine
+                msg += "Description: " + ex.ToString() + Environment.NewLine
+                MessageBox.Show(msg, "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.[Error])
+            End Sub
 
-		End Sub
+        End Class
 
-	End Module
-
-End Namespace
+    End Namespace

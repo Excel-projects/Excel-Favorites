@@ -40,7 +40,7 @@
           <button
 						id="btnCut"
 						label="Cut"
-						onAction="CutSelection"
+						onAction="OnAction"
 						imageMso="Cut"
 						size="large"
 						screentip="Cut the selection and put it on the clipboard"
@@ -111,76 +111,84 @@
 					/>
         </group>
 
-        <group
-					id="grpOptions"
-					label="Options"
-          imageMso="PropertySheet"
-					>
-          <button
-						id="btnSettings"
-						label="Settings"
-						onAction="OpenSettingsForm"
-						imageMso="PropertySheet"
-						size="large"
-						screentip="The settings for this Addin"
-					/>
-          <button
-						idMso="ComAddInsDialog"
-						visible="true"
-						size="large"
-					/>
-        </group>
+				<group
+						id="grpOptions"
+						label="Options"
+						imageMso="PropertySheet">
+					<button
+							id="btnSettings"
+							label="Add-In Settings"
+							onAction="OnAction"
+							imageMso="PropertySheet"
+							size="large"
+							screentip="Add-In Settings Form"
+							supertip="This opens a user form with a list of custom properties stored in the file."
+							/>
+					<button
+							idMso="ComAddInsDialog"
+							visible="false"
+							size="large"
+							/>
+				</group>
 
-        <group
-					id="grpAbout"
-					label="About"
-          imageMso="Help"
-					>
-          <button
-            id="btnHelpAsBuilt"
-            label="How To...   "
-            onAction="OpenHelpAsBuiltFile"
-            imageMso="Help"
-            size="normal"
-            screentip="How to use this Excel Add-In"
-					/>
-          <button
-						id="btnHelpApi"
-						label="API Doc...   "
-						onAction="OpenHelpApiFile"
-						imageMso="CategoryCollapse"
-						size="normal"
-            enabled="false"
-						screentip="View API documentation for this product"
-					/>
-          <separator
-						id="separator4"
-					/>
-          <labelControl
-						id="lblDescription"
-						label="Add-In Name:"
-					/>
-          <labelControl
-						id="lblReleaseDate"
-						label="Release Date: "
-					/>
-          <labelControl
-						id="lblCopyright"
-						label="Copyright: "
-					/>
-          <labelControl
-						id="txtDescription"
-						getLabel="GetLabelText"
-					/>
-          <labelControl
-						id="txtReleaseDate"
-						getLabel="GetLabelText"
-					/>
-          <labelControl
-						id="txtCopyright"
-						getLabel="GetLabelText"
-					/>
-        </group>
+				<group
+						id="grpHelp"
+						label="Help"
+						imageMso="Help">
+					<button
+							id="btnOpenReadMe"
+							label="How To...   "
+							onAction="OnAction"
+							imageMso="Help"
+							size="large"
+							screentip="How To..."
+							supertip="This opens the read me page with detailed instructions of the Add-In functionality."
+							/>
+					<button
+							id="btnOpenNewIssue"
+							label="Report Issue"
+							onAction="OnAction"
+							imageMso="MacroSecurity"
+							size="large"
+							screentip="Report An Issue"
+							supertip="This will open a new issue page. The user will need to login to raise an issue."
+							/>
+				</group>
+				<group
+						id="grpAbout"
+						label="About"
+						imageMso="Info">
+					<labelControl
+							id="lblDescription"
+							label="Add-In Name: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="lblReleaseDate"
+							label="Release Date: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="lblCopyright"
+							label="Copyright: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtDescription"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtReleaseDate"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtCopyright"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+				</group>
 
       </tab>
     </tabs>

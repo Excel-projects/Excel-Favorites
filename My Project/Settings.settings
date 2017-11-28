@@ -8,5 +8,11 @@
     <Setting Name="App_PathReadMe" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/README.md</Value>
     </Setting>
+    <Setting Name="App_PathReportIssue" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://github.com/aduguid/MicrosoftExcelFavorites/issues/new</Value>
+    </Setting>
+    <Setting Name="App_ReleaseDate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">07/31/2017 13:05:00</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
