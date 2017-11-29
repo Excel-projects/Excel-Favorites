@@ -224,7 +224,7 @@ VBA
 </h1>
 
 <a id="user-content-description" class="anchor" href="#description" aria-hidden="true"> </a>
-#### Description (Label)
+#### Add-in Name (Label)
 * The application name with the version
 
 <a id="user-content-release-date" class="anchor" href="#release-date" aria-hidden="true"> </a>
