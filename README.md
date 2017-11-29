@@ -161,9 +161,13 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 
 <img src="Images/ReadMe/windows_calculator.png" alt="calculator" />
 
+  - The Windows Calculator runs in standard mode, which resembles a four-function calculator. More advanced functions are available in scientific mode, including logarithms, numerical base conversions, some logical operators, operator precedence, radian, degree and gradians support as well as simple single-variable statistical functions
+
 <a id="user-content-calculate-now" class="anchor" href="#calculate-now" aria-hidden="true"> </a>
 #### Calculate Now (Button)
 
+  - Force the Calculation. Even if the Calculation option is set for Manual, you can force a calculation. 
+  
 <a id="user-content-annotation-group" class="anchor" href="#annotation-group" aria-hidden="true"> </a>
 ###	Annotate (Group)
 
