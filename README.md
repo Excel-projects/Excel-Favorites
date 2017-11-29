@@ -170,15 +170,26 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 <a id="user-content-camera" class="anchor" href="#camera" aria-hidden="true"> </a>
 #### Excel Camera(Button)
 
+  - The camera tool allows you to take a snapshot of any selected range of data, table, or graph, and paste it as a linked picture.
+The pasted snapshot can be formatted and resized using picture tools. They can be copied and pasted into Word and PowerPoint documents as well.
+
 <a id="user-content-snip" class="anchor" href="#snip" aria-hidden="true"> </a>
 #### Snipping Tool (Button)
 
 <img src="Images/ReadMe/snipping_tool.png" alt="snipping_tool" />
 
+  - Capture all or part of your PC screen, add notes, save the snip, or email it from the Snipping Tool window. You can capture any of the following types of snips:
+    - Free-form snip. Draw a free-form shape around an object.
+    - Rectangular snip. Drag the cursor around an object to form a rectangle.
+    - Window snip. Select a window, such as a browser window or dialog box, that you want to capture.
+    - Full-screen snip. Capture the entire screen.
+
 <a id="user-content-psr" class="anchor" href="#psr" aria-hidden="true"> </a>
 #### Problem Step Recorder (Button)
 
 <img src="Images/ReadMe/problem_steps_recorder.png" alt="psr" />
+
+  - Steps Recorder (called Problems Steps Recorder in Windows 7), is a program that helps you troubleshoot a problem on your device by recording the exact steps you took when the problem occurred. You can then send this record to a support professional to help them diagnose the problem.
 
 <a id="user-content-options" class="anchor" href="#options" aria-hidden="true"> </a>
 ###	Options (Group)
