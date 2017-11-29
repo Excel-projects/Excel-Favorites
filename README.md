@@ -38,10 +38,10 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
          - <a href="#properties">Properties</a> 
          - <a href="#options">Options</a> 
          - <a href="#exit">Exit</a> 
-    - <a href="#calculator-group">Calculator</a>  
+    - <a href="#calculator-group">Evaluate</a>  
          - <a href="#calculator">Windows Calculator</a> 
          - <a href="#calculate-now">Calculate Now</a> 
-    - <a href="#annotation-group">Annotation Tools</a>  
+    - <a href="#annotation-group">Annotate</a>  
          - <a href="#camera">Excel Camera</a> 
          - <a href="#snip">Snipping Tool</a> 
          - <a href="#psr">Problem Step Recorder</a> 
