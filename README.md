@@ -15,6 +15,7 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
 </h1>
 
 https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/Images/ReadMe/vsto.excel.favorites.png?
+https://raw.githubusercontent.com/aduguid/MicrosoftExcelFavorites/master/Images/ReadMe/vsto.excel.favorites.png?
 
 ## Table of Contents
 - <a href="#dependencies">Dependencies</a>
