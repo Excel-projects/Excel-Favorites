@@ -198,29 +198,38 @@ VBA
     ```vbnet
     ThisWorkbook.CustomDocumentProperties.Item("App_ReleaseDate").Delete
     ```
-
-
 <a id="user-content-help" class="anchor" href="#help" aria-hidden="true"> </a>
-### Help (Group)
+###	Help (Group)
+<h1 align="left">
+  <img src="Images/ReadMe/ribbon.group.help.png" alt="help" />
+</h1>
 
 <a id="user-content-how-to" class="anchor" href="#how-to" aria-hidden="true"> </a>
-#### How To… (Button)
-* How to use this Excel Addin
+####	How To... (Button)
+* Opens the how to guide in a browser
 
-<a id="user-content-api-doc" class="anchor" href="#report-issue" aria-hidden="true"> </a>
-#### Report Issue (Button)
-* Create a new issue on the project page
+<a id="user-content-report-issue" class="anchor" href="#report-issue" aria-hidden="true"> </a>
+####	Report Issue (Button)
+* Opens the new issue page in a browser
+
+<a id="user-content-new-version" class="anchor" href="#new-version" aria-hidden="true"> </a>
+####	New Version Is Available (Button)
+* This button is visible if the version of the Add-In is different from the one in the Read Me page. It will download a new version from the site when pressed.
 
 <a id="user-content-about" class="anchor" href="#about" aria-hidden="true"> </a>
-### About (Group)
+###	About (Group)
+
+<h1 align="left">
+  <img src="Images/ReadMe/ribbon.group.about.png" alt="about" />
+</h1>
 
 <a id="user-content-description" class="anchor" href="#description" aria-hidden="true"> </a>
 #### Description (Label)
 * The application name with the version
 
-<a id="user-content-install-date" class="anchor" href="#install-date" aria-hidden="true"> </a>
-#### Install Date (Label)
-* The install date of the application
+<a id="user-content-release-date" class="anchor" href="#release-date" aria-hidden="true"> </a>
+#### Release Date (Label)
+* The release date of the application
 
 <a id="user-content-copyright" class="anchor" href="#copyright" aria-hidden="true"> </a>
 #### Copyright (Label)
