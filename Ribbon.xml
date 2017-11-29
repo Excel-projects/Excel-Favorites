@@ -117,11 +117,11 @@
         </group>
 				<group
 						id="grpCalculator"
-						label="Calculator"
+						label="Evaluate"
 						imageMso="Calculator">
 					<button
 							idMso="Calculator"
-							label="Calculator"
+							label="Windows Calculator"
 							size="large"
 							screentip="Windows Calculator"
 							supertip="By default, Calculator runs in standard mode, which resembles a four-function calculator. More advanced functions are available in scientific mode."
@@ -133,7 +133,7 @@
 				</group>
 				<group
 						id="grpAnnotation"
-						label="Annotation Tools"
+						label="Annotate"
 						imageMso="Camera">
 					<button
 							idMso="Camera"
