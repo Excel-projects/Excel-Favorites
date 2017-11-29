@@ -175,7 +175,7 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 #### Excel Camera(Button)
 
   - The camera tool allows you to take a snapshot of any selected range of data, table, or graph, and paste it as a linked picture.
-The pasted snapshot can be formatted and resized using picture tools. They can be copied and pasted into Word and PowerPoint documents as well.
+The pasted snapshot can be formatted and resized using picture tools. They can be copied and pasted into Word and PowerPoint documents as well. The image is automatically refreshed if the data changes.
 
 <a id="user-content-snip" class="anchor" href="#snip" aria-hidden="true"> </a>
 #### Snipping Tool (Button)
