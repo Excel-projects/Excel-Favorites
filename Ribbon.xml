@@ -137,6 +137,7 @@
 						imageMso="Camera">
 					<button
 							idMso="Camera"
+							label="Excel Camera"
 							size="large"
 							screentip="Microsoft Excel Camera"
 							supertip="This tool allows you to take a snapshot of a selected datasheet portion, it also syncs the data with the image; whenever you make changes to the original data set, live image gets updated, showing you the latest cells values. "
