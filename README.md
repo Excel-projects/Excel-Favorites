@@ -4,14 +4,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
 ![current_build Office_2010](https://img.shields.io/badge/current_build-Office_2010-red.svg)
 
-This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlam?raw=true "Download the VBA Add-In"). It gives the user a custom favorites ribbon.
+This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlsm?raw=true "Download the VBA Add-In"). It gives the user a custom favorites ribbon.
 <!---
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
 [![star this repo](http://githubbadges.com/star.svg?user=aduguid&repo=MicrosoftExcelFavorites&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftExcelFavorites)
 [![fork this repo](http://githubbadges.com/fork.svg?user=aduguid&repo=MicrosoftExcelFavorites&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftExcelFavorites/fork)
 --->
 <h1 align="left">
-  <img src="Images/ReadMe/MicrosoftExcelFavoritesRibbon.png" alt="Ribbon" />
+  <img src="Images/ReadMe/vsto.excel.favorites.png" alt="Ribbon" />
 </h1>
 
 ## Table of Contents
