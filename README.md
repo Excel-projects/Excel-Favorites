@@ -1,10 +1,10 @@
 <img align="left" src="Images/ReadMe/App.png" width="64px" >
 
-# Microsoft Excel Favorites Ribbon
+# Microsoft Excel Favorites <span class="Application_Version">3.0.0.0</span> 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
 ![current_build Office_2013](https://img.shields.io/badge/current_build-Office_2013-red.svg)
 
-This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlsm?raw=true "Download the VBA Add-In"). It gives the user a custom favorites ribbon.
+This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlam?raw=true "Download the VBA Add-In"). It gives the user a custom favorites ribbon.
 <!---
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
 [![star this repo](http://githubbadges.com/star.svg?user=aduguid&repo=MicrosoftExcelFavorites&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftExcelFavorites)
@@ -38,22 +38,34 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
          - <a href="#properties">Properties</a> 
          - <a href="#options">Options</a> 
          - <a href="#exit">Exit</a> 
+    - <a href="#calculator-group">Evaluate</a>  
+         - <a href="#calculator">Windows Calculator</a> 
+         - <a href="#calculate-now">Calculate Now</a> 
+    - <a href="#annotation-group">Annotate</a>  
+         - <a href="#camera">Excel Camera</a> 
+         - <a href="#snip">Snipping Tool</a> 
+         - <a href="#psr">Problem Step Recorder</a> 
     - <a href="#options-group">Options</a>  
-         - <a href="#settings">Settings</a> 
-         - <a href="#com-addins">COM Add-Ins</a> 
-    - <a href="#about">About</a>
+         - <a href="#settings">Add-In Settings</a> 
+    - <a href="#help">Help</a>
         - <a href="#how-to">How To...</a>  
-        - <a href="#api-doc">API Doc...</a>  
+        - <a href="#report-issue">Report Issue</a>  
+    - <a href="#about">About</a>
         - <a href="#description">Add-in Name</a>
-        - <a href="#install-date">Install Date</a>  
+        - <a href="#install-date">Release Date</a>  
         - <a href="#copyright">Copyright</a>  
 
 <a id="user-content-dependencies" class="anchor" href="#dependencies" aria-hidden="true"> </a>
 ## Dependencies
-|Software                                   |Dependency                 |
-|:------------------------------------------|:--------------------------|
-|[Microsoft Visual Studio Community 2017](https://www.visualstudio.com/vs/whatsnew/)|Solution|
-|[Microsoft Excel 2010](https://www.microsoft.com/en-au/software-download/office)|Project|
+|Software                                   |Dependency                 |Project                    |
+|:------------------------------------------|:--------------------------|:--------------------------|
+|[Microsoft Visual Studio Community 2017](https://www.visualstudio.com/vs/whatsnew/)|Solution|VSTO|
+|[Microsoft Office Developer Tools](https://blogs.msdn.microsoft.com/visualstudio/2015/11/23/latest-microsoft-office-developer-tools-for-visual-studio-2015/)|Solution|VSTO|
+|[Microsoft Excel 2010 (or later)](https://www.microsoft.com/en-au/software-download/office)|Project|VBA, VSTO|
+|[Visual Basic for Applications](https://msdn.microsoft.com/en-us/vba/vba-language-reference)|Code|VBA|
+|[Extensible Markup Language (XML)](https://www.rondebruin.nl/win/s2/win001.htm)|Ribbon|VBA, VSTO|
+|[Snagit](http://discover.techsmith.com/snagit-non-brand-desktop/?gclid=CNzQiOTO09UCFVoFKgod9EIB3g)|Read Me|VBA, VSTO|
+|Badges ([Library](https://shields.io/), [Custom](https://rozaxe.github.io/factory/), [Star/Fork](http://githubbadges.com))|Read Me|VBA, VSTO|
 
 <a id="user-content-glossary-of-terms" class="anchor" href="#glossary-of-terms" aria-hidden="true"> </a>
 ## Glossary of Terms
@@ -61,8 +73,9 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
 | Term                      | Meaning                                                                                  |
 |:--------------------------|:-----------------------------------------------------------------------------------------|
 | COM |Component Object Model (COM) is a binary-interface standard for software components introduced by Microsoft in 1993. It is used to enable inter-process communication and dynamic object creation in a large range of programming languages. COM is the basis for several other Microsoft technologies and frameworks, including OLE, OLE Automation, ActiveX, COM+, DCOM, the Windows shell, DirectX, UMDF and Windows Runtime.  |
-|VSTO |Visual Studio Tools for Office (VSTO) is a set of development tools available in the form of a Visual Studio add-in (project templates) and a runtime that allows Microsoft Office 2003 and later versions of Office applications to host the .NET Framework Common Language Runtime (CLR) to expose their functionality via .NET.|
-|XML|Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.The design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures such as those used in web services.|
+| VBA |Visual Basic for Applications (VBA) is an implementation of Microsoft's event-driven programming language Visual Basic 6 and uses the Visual Basic Runtime Library. However, VBA code normally can only run within a host application, rather than as a standalone program. VBA can, however, control one application from another using OLE Automation. VBA can use, but not create, ActiveX/COM DLLs, and later versions add support for class modules.|
+| VSTO |Visual Studio Tools for Office (VSTO) is a set of development tools available in the form of a Visual Studio add-in (project templates) and a runtime that allows Microsoft Office 2003 and later versions of Office applications to host the .NET Framework Common Language Runtime (CLR) to expose their functionality via .NET.|
+| XML|Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.The design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures such as those used in web services.|
 
 <a id="user-content-functionality" class="anchor" href="#functionality" aria-hidden="true"> </a>
 ## Functionality
@@ -152,20 +165,19 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
     - These settings can be changed by the end-user
     - They will appear enabled in the form
 
-<a id="user-content-com-addins" class="anchor" href="#com-addins" aria-hidden="true"> </a>
-#### COM Addins (Button)
-* Manage the available COM Add-ins
-
-<a id="user-content-about" class="anchor" href="#about" aria-hidden="true"> </a>
-### About (Group)
+<a id="user-content-help" class="anchor" href="#help" aria-hidden="true"> </a>
+### Help (Group)
 
 <a id="user-content-how-to" class="anchor" href="#how-to" aria-hidden="true"> </a>
 #### How To… (Button)
 * How to use this Excel Addin
 
-<a id="user-content-api-doc" class="anchor" href="#api-doc" aria-hidden="true"> </a>
-#### API Doc.. (Button)
-* View API documentation for this product
+<a id="user-content-api-doc" class="anchor" href="#report-issue" aria-hidden="true"> </a>
+#### Report Issue (Button)
+* Create a new issue on the project page
+
+<a id="user-content-about" class="anchor" href="#about" aria-hidden="true"> </a>
+### About (Group)
 
 <a id="user-content-description" class="anchor" href="#description" aria-hidden="true"> </a>
 #### Description (Label)
