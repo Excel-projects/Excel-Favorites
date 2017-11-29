@@ -11,7 +11,7 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
 [![fork this repo](http://githubbadges.com/fork.svg?user=aduguid&repo=MicrosoftExcelFavorites&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftExcelFavorites/fork)
 --->
 <h1 align="left">
-  <img src="Images/ReadMe/MicrosoftExcelFavoritesRibbon.png" alt="Ribbon" />
+  <img src="Images/ReadMe/vsto.excel.favorites.png" alt="Ribbon" />
 </h1>
 
 ## Table of Contents
