@@ -31,14 +31,14 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
          - <a href="#setup">Setup</a> 
          - <a href="#preview">Preview</a> 
          - <a href="#print">Print</a> 
-    - <a href="#program">Program</a>  
+    - <a href="#program-group">Program</a>  
          - <a href="#new">New</a> 
          - <a href="#open">Open</a> 
          - <a href="#close">Close</a> 
          - <a href="#properties">Properties</a> 
          - <a href="#options">Options</a> 
          - <a href="#exit">Exit</a> 
-    - <a href="#calculator-group">Evaluate</a>  
+    - <a href="#evaluate-group">Evaluate</a>  
          - <a href="#calculator">Windows Calculator</a> 
          - <a href="#calculate-now">Calculate Now</a> 
     - <a href="#annotation-group">Annotate</a>  
@@ -153,9 +153,31 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 #### Exit (Button)
 * Exit the application
 
+<a id="user-content-evaluate-group" class="anchor" href="#evaluate-group" aria-hidden="true"> </a>
+###	Evaluate (Group)
+
+<a id="user-content-calculator" class="anchor" href="#calculator" aria-hidden="true"> </a>
+#### Windows Calculator (Button)
 
 <img src="Images/ReadMe/windows_calculator.png" alt="calculator" />
+
+<a id="user-content-calculate-now" class="anchor" href="#calculate-now" aria-hidden="true"> </a>
+#### Calculate Now (Button)
+
+<a id="user-content-annotation-group" class="anchor" href="#annotation-group" aria-hidden="true"> </a>
+###	Annotate (Group)
+
+<a id="user-content-camera" class="anchor" href="#camera" aria-hidden="true"> </a>
+#### Excel Camera(Button)
+
+<a id="user-content-snip" class="anchor" href="#snip" aria-hidden="true"> </a>
+#### Snipping Tool (Button)
+
 <img src="Images/ReadMe/snipping_tool.png" alt="snipping_tool" />
+
+<a id="user-content-psr" class="anchor" href="#psr" aria-hidden="true"> </a>
+#### Problem Step Recorder (Button)
+
 <img src="Images/ReadMe/problem_steps_recorder.png" alt="psr" />
 
 <a id="user-content-options" class="anchor" href="#options" aria-hidden="true"> </a>
