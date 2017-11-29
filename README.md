@@ -153,6 +153,12 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 #### Exit (Button)
 * Exit the application
 
+
+<img src="Images/ReadMe/windows_calculator.png" alt="calculator" />
+<img src="Images/ReadMe/snipping_tool.png" alt="snipping_tool" />
+<img src="Images/ReadMe/problem_steps_recorder.png" alt="psr" />
+
+
 #### Add-In Settings (Button)
 
 <kbd>
