@@ -158,6 +158,8 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 <img src="Images/ReadMe/snipping_tool.png" alt="snipping_tool" />
 <img src="Images/ReadMe/problem_steps_recorder.png" alt="psr" />
 
+<a id="user-content-options" class="anchor" href="#options" aria-hidden="true"> </a>
+###	Options (Group)
 
 #### Add-In Settings (Button)
 
