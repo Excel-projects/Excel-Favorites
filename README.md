@@ -38,14 +38,21 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
          - <a href="#properties">Properties</a> 
          - <a href="#options">Options</a> 
          - <a href="#exit">Exit</a> 
+    - <a href="#calculator-group">Calculator</a>  
+         - <a href="#calculator">Windows Calculator</a> 
+         - <a href="#calculate-now">Calculate Now</a> 
+    - <a href="#annotation-group">Annotation Tools</a>  
+         - <a href="#camera">Excel Camera</a> 
+         - <a href="#snip">Snipping Tool</a> 
+         - <a href="#psr">Problem Step Recorder</a> 
     - <a href="#options-group">Options</a>  
-         - <a href="#settings">Settings</a> 
-         - <a href="#com-addins">COM Add-Ins</a> 
-    - <a href="#about">About</a>
+         - <a href="#settings">Add-In Settings</a> 
+    - <a href="#help">Help</a>
         - <a href="#how-to">How To...</a>  
-        - <a href="#api-doc">API Doc...</a>  
+        - <a href="#report-issue">Report Issue</a>  
+    - <a href="#about">About</a>
         - <a href="#description">Add-in Name</a>
-        - <a href="#install-date">Install Date</a>  
+        - <a href="#install-date">Release Date</a>  
         - <a href="#copyright">Copyright</a>  
 
 <a id="user-content-dependencies" class="anchor" href="#dependencies" aria-hidden="true"> </a>
