@@ -172,7 +172,7 @@ VSTO
 <kbd>
 VBA
 <br>
-  <img align="left" src="Images/ReadMe/vba.ribbon.settings.png" />
+  <img align="left" src="Images/ReadMe/vba.settings.form.png" />
 </kbd>
 
 - VBA Settings
