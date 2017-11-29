@@ -14,6 +14,8 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
   <img src="Images/ReadMe/vsto.excel.favorites.png" alt="Ribbon" />
 </h1>
 
+https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/Images/ReadMe/vsto.excel.favorites.png?
+
 ## Table of Contents
 - <a href="#dependencies">Dependencies</a>
 - <a href="#glossary-of-terms">Glossary of Terms</a>
