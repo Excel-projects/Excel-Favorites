@@ -301,9 +301,14 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\problem_steps_recorder.png" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snipping_tool.png" />
   </ItemGroup>
   <!-- Include the build rules for a Visual Basic project. -->
   <PropertyGroup>

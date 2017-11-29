@@ -2,6 +2,7 @@
 Option Explicit On
 
 Imports System.Windows.Forms
+Imports Excel = Microsoft.Office.Interop.Excel
 
 Namespace Scripts
 
@@ -41,6 +42,25 @@ Namespace Scripts
             Me.ribbon = ribbonUI
         End Sub
 
+        Public Function GetButtonImage(ByVal control As Office.IRibbonControl) As System.Drawing.Bitmap
+            Try
+                Select Case control.Id.ToString
+                    Case Is = "btnProblemStepRecorder"
+                        Return My.Resources.Resources.problem_steps_recorder
+                    Case Is = "btnSnippingTool"
+                        Return My.Resources.Resources.snipping_tool
+                    Case Else
+                        Return Nothing
+                End Select
+
+            Catch ex As Exception
+                ErrorHandler.DisplayMessage(ex)
+                Return Nothing
+
+            End Try
+
+        End Function
+
         Public Function GetLabelText(ByVal control As Office.IRibbonControl) As String
             Try
                 Select Case control.Id.ToString
@@ -62,7 +82,7 @@ Namespace Scripts
                 End Select
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Return String.Empty
 
             End Try
@@ -72,6 +92,8 @@ Namespace Scripts
         Public Sub OnAction(ByVal Control As Office.IRibbonControl)
             Try
                 Select Case Control.Id
+                    Case "btnCopyVisibleCells"
+                        CopyVisibleCells()
                     Case "btnCut"
                         CutSelection()
                     Case "btnOpenReadMe"
@@ -80,6 +102,10 @@ Namespace Scripts
                         OpenNewIssue()
                     Case "btnSettings"
                         OpenSettings()
+                    Case "btnProblemStepRecorder"
+                        OpenProblemStepRecorder()
+                    Case "btnSnippingTool"
+                        OpenSnippingTool()
                 End Select
 
             Catch ex As Exception
@@ -93,12 +119,32 @@ Namespace Scripts
 
 #Region "| Ribbon Buttons |"
 
+        Public Sub CopyVisibleCells()
+            Dim visibleRange As Excel.Range = Nothing
+            Try
+                If ErrorHandler.IsEnabled(True) = False Then
+                    Return
+                End If
+                visibleRange = Globals.ThisAddIn.Application.Selection.SpecialCells(Excel.XlCellType.xlCellTypeVisible)
+                visibleRange.Copy()
+
+            Catch ex As Exception
+                ErrorHandler.DisplayMessage(ex)
+
+            Finally
+                If visibleRange IsNot Nothing Then
+                    'Marshal.ReleaseComObject(visibleRange)
+                End If
+            End Try
+
+        End Sub
+
         Public Sub CutSelection()
             Try
                 Globals.ThisAddIn.Application.Selection.Cut()
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
 
             End Try
 
@@ -110,7 +156,6 @@ Namespace Scripts
 
         Public Sub OpenNewIssue()
             System.Diagnostics.Process.Start(My.Settings.App_PathReportIssue)
-
         End Sub
 
         Public Sub OpenSettings()
@@ -132,8 +177,44 @@ Namespace Scripts
                 End If
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
 
+            End Try
+
+        End Sub
+
+        Public Sub OpenSnippingTool()
+            Dim filePath As String
+            Dim myShell As Object
+            Try
+                myShell = CreateObject("WScript.Shell")
+                If 0 < Len(Environ("ProgramW6432")) Then 'determine whether Windows is 64-bit or 32-bit:
+                    filePath = "C:\Windows\sysnative\SnippingTool.exe"
+                Else
+                    filePath = "C:\Windows\system32\SnippingTool.exe"
+                End If
+                myShell.Run(filePath)
+
+            Catch ex As Exception
+                ErrorHandler.DisplayMessage(ex)
+            Finally
+                myShell = Nothing
+            End Try
+
+        End Sub
+
+        Public Sub OpenProblemStepRecorder()
+            Dim filePath As String
+            Dim myShell As Object
+            Try
+                myShell = CreateObject("WScript.Shell")
+                filePath = "C:\Windows\System32\psr.exe"
+                myShell.Run(filePath)
+
+            Catch ex As Exception
+                ErrorHandler.DisplayMessage(ex)
+            Finally
+                myShell = Nothing
             End Try
 
         End Sub
@@ -154,7 +235,7 @@ Namespace Scripts
                 Exit Try
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Exit Try
 
             Finally

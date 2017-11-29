@@ -37,14 +37,19 @@
 						idMso="Copy"
 						size="large"
 					/>
-          <button
-						id="btnCut"
-						label="Cut"
-						onAction="OnAction"
-						imageMso="Cut"
-						size="large"
-						screentip="Cut the selection and put it on the clipboard"
-					/>
+					<button
+							id="btnCopyVisibleCells"
+							label="Copy Visible"
+							onAction="OnAction"
+							imageMso="Copy"
+							size="large"
+							screentip="Copy Visible Cells"
+							supertip="Copies only visible cells from a selection"
+							/>
+					<button
+							idMso="Cut"
+							size="large"
+							/>
           <splitButton
 						idMso="PasteMenu"
 						size="large"
@@ -110,7 +115,51 @@
 						imageMso="DeclineInvitation"
 					/>
         </group>
-
+				<group
+						id="grpCalculator"
+						label="Calculator"
+						imageMso="Calculator">
+					<button
+							idMso="Calculator"
+							label="Calculator"
+							size="large"
+							screentip="Windows Calculator"
+							supertip="By default, Calculator runs in standard mode, which resembles a four-function calculator. More advanced functions are available in scientific mode."
+							/>
+					<button
+							idMso="CalculateNow"
+							size="large"
+							/>
+				</group>
+				<group
+						id="grpAnnotation"
+						label="Annotation Tools"
+						imageMso="Camera">
+					<button
+							idMso="Camera"
+							size="large"
+							screentip="Microsoft Excel Camera"
+							supertip="This tool allows you to take a snapshot of a selected datasheet portion, it also syncs the data with the image; whenever you make changes to the original data set, live image gets updated, showing you the latest cells values. "
+							/>
+					<button
+							id="btnSnippingTool"
+							label="Snipping Tool"
+							onAction="OnAction"
+							getImage="GetButtonImage"
+							size="large"
+							screentip="Microsoft Snipping Tool"
+							supertip="Snipping Tool is a screenshot utility included in Microsoft Windows. It can take screenshots of an open window, rectangular areas, a free-form area, or the entire screen."
+							/>
+					<button
+							id="btnProblemStepRecorder"
+							label="Record Steps"
+							onAction="OnAction"
+							getImage="GetButtonImage"
+							size="large"
+							screentip="Microsoft Problem Steps Recorder"
+							supertip="Problem Steps Recorder or PSR records the actions you take on your computer which you can then send to the person or group helping you with your computer problem."
+							/>
+				</group>
 				<group
 						id="grpOptions"
 						label="Options"
@@ -123,11 +172,6 @@
 							size="large"
 							screentip="Add-In Settings Form"
 							supertip="This opens a user form with a list of custom properties stored in the file."
-							/>
-					<button
-							idMso="ComAddInsDialog"
-							visible="false"
-							size="large"
 							/>
 				</group>
 
