@@ -2,7 +2,7 @@
 
 # Microsoft Excel Favorites Ribbon
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
-![current_build Office_2010](https://img.shields.io/badge/current_build-Office_2010-red.svg)
+![current_build Office_2013](https://img.shields.io/badge/current_build-Office_2013-red.svg)
 
 This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlsm?raw=true "Download the VBA Add-In"). It gives the user a custom favorites ribbon.
 <!---
