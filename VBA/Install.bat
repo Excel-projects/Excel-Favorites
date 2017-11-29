@@ -20,4 +20,5 @@ REM 	/Y 	 = Suppresses prompting to confirm you want to overwrite an existing de
 REM
 
 REM	Copy the install directory and sub-directories
-	XCOPY ".\Favorites.xlam" "%AppData%\Microsoft\AddIns\Favorites.xlam" /E /K /Q /R /Y /D
+REM	XCOPY ".\Favorites.xlam" "%AppData%\Microsoft\AddIns\Favorites.xlam" /E /K /Q /R /Y /D
+	XCOPY ".\Favorites.xlam" "%AppData%\Microsoft\Excel\XLSTART\Favorites.xlam" /E /K /Q /R /Y /D
