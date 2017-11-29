@@ -153,17 +153,46 @@ This Excel ribbon named “Favorites” is inserted after the “Home” tab whe
 #### Exit (Button)
 * Exit the application
 
-<a id="user-content-options-group" class="anchor" href="#options-group" aria-hidden="true"> </a>
-### Options (Group)
-<a id="user-content-settings" class="anchor" href="#settings" aria-hidden="true"> </a>
-#### Settings (Button)
-- Types of Settings
+#### Add-In Settings (Button)
+
+<kbd>
+VSTO
+<br>
+  <img align="left" src="Images/ReadMe/vsto.ribbon.settings.png" />
+</kbd>
+
+- Types of VSTO Settings
   - Application Settings
     - These settings can only be changed in the project and need to be redeployed
     - They will appear disabled in the form
   - User Settings
     - These settings can be changed by the end-user
     - They will appear enabled in the form
+    
+<kbd>
+VBA
+<br>
+  <img align="left" src="Images/ReadMe/vba.ribbon.settings.png" />
+</kbd>
+
+- VBA Settings
+  - To add a new setting
+    ```vbnet
+    ThisWorkbook.CustomDocumentProperties.Add _
+    Name:="App_ReleaseDate" _
+    , LinkToContent:=False _
+    , Type:=msoPropertyTypeDate _
+    , Value:="31-Jul-2017 1:05pm"
+    ```
+  - To update a setting
+    ```vbnet
+    ThisWorkbook.CustomDocumentProperties.Item("App_ReleaseDate").Value = "31-Jul-2017 1:05pm"
+    ```
+  - To delete a setting
+    ```vbnet
+    ThisWorkbook.CustomDocumentProperties.Item("App_ReleaseDate").Delete
+    ```
+
 
 <a id="user-content-help" class="anchor" href="#help" aria-hidden="true"> </a>
 ### Help (Group)
