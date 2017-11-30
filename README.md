@@ -20,41 +20,59 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
 - <a href="#glossary-of-terms">Glossary of Terms</a>
 - <a href="#functionality">Functionality</a>
     - <a href="#worksheet">Worksheet</a>
+<!---
          - <a href="#save">Save</a> 
          - <a href="#save-as">Save As</a> 
+--->
     - <a href="#edit">Edit</a>
+<!---
          - <a href="#undo">Undo</a> 
          - <a href="#copy">Copy</a> 
          - <a href="#cut">Cut</a> 
          - <a href="#paste">Paste</a> 
          - <a href="#spelling">Spelling</a> 
+--->
     - <a href="#print-group">Print</a>   
+<!---
          - <a href="#setup">Setup</a> 
          - <a href="#preview">Preview</a> 
          - <a href="#print">Print</a> 
+--->
     - <a href="#program-group">Program</a>  
+<!---
          - <a href="#new">New</a> 
          - <a href="#open">Open</a> 
          - <a href="#close">Close</a> 
          - <a href="#properties">Properties</a> 
          - <a href="#options">Options</a> 
          - <a href="#exit">Exit</a> 
+--->
     - <a href="#evaluate-group">Evaluate</a>  
+<!---
          - <a href="#calculator">Windows Calculator</a> 
          - <a href="#calculate-now">Calculate Now</a> 
+--->
     - <a href="#annotation-group">Annotate</a>  
+<!---
          - <a href="#camera">Excel Camera</a> 
          - <a href="#snip">Snipping Tool</a> 
          - <a href="#psr">Problem Step Recorder</a> 
+--->
     - <a href="#options-group">Options</a>  
+<!---
          - <a href="#settings">Add-In Settings</a> 
+--->
     - <a href="#help">Help</a>
+<!---
         - <a href="#how-to">How To...</a>  
         - <a href="#report-issue">Report Issue</a>  
+--->
     - <a href="#about">About</a>
+<!---
         - <a href="#description">Add-in Name</a>
         - <a href="#install-date">Release Date</a>  
         - <a href="#copyright">Copyright</a>  
+--->
 
 
 <a id="user-content-install" class="anchor" href="#install" aria-hidden="true"> </a>
