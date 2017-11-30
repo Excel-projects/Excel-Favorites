@@ -62,9 +62,9 @@ This is an Excel Add-In written in Visual Studio Community 2017 VB.NET and [VBA]
 
 ### VBA
 How to install the VBA version
-* Step 1. Download the VBA Add-In file [here](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlam?raw=true "Download the VBA Add-In").
-* Step 2. Copy the file to the XLSTART ```%AppData%\Microsoft\Excel\XLSTART\``` folder on your computer.
-* Step 3. Open Excel and the new ribbon should appear.
+1. Download the VBA Add-In file [here](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlam?raw=true "Download the VBA Add-In").
+2. Copy the file to the XLSTART ```%AppData%\Microsoft\Excel\XLSTART\``` folder on your computer.
+3. Open Excel and the new ribbon should appear.
 
 ### VSTO
 How to install the VSTO version
