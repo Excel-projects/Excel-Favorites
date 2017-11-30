@@ -75,7 +75,7 @@ Instructions for installation for VBA and VSTO versions.
 How to install the VBA version
 1. Download the VBA Add-In file [here](https://github.com/aduguid/MicrosoftExcelFavorites/raw/master/VBA/Favorites.xlam?raw=true "Download the VBA Add-In").
 2. Copy the file to the XLSTART ```%AppData%\Microsoft\Excel\XLSTART\``` folder on your computer.
-3. Open Excel and the new ribbon should appear.
+3. Close all open instances of Excel and then launch Excel. The new ribbon should appear.
 
 ### VSTO
 How to install the VSTO version
