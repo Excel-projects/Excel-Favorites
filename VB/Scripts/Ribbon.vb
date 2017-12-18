@@ -10,14 +10,10 @@ Namespace Scripts
     Public Class Ribbon
         Implements Office.IRibbonExtensibility
         Private ribbon As Office.IRibbonUI
-
         Private mySettings As TaskPane.Settings
         Private myTaskPaneSettings As Microsoft.Office.Tools.CustomTaskPane
 
 #Region "| Ribbon Events |"
-
-        Public Sub New()
-        End Sub
 
         Public Function GetCustomUI(ByVal ribbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
             Return GetResourceText("Favorites.Ribbon.xml")
@@ -94,8 +90,6 @@ Namespace Scripts
                 Select Case Control.Id
                     Case "btnCopyVisibleCells"
                         CopyVisibleCells()
-                    Case "btnCut"
-                        CutSelection()
                     Case "btnOpenReadMe"
                         OpenReadMe()
                     Case "btnOpenNewIssue"
@@ -139,9 +133,22 @@ Namespace Scripts
 
         End Sub
 
-        Public Sub CutSelection()
+        Public Sub OpenNewIssue()
             Try
-                Globals.ThisAddIn.Application.Selection.Cut()
+                System.Diagnostics.Process.Start(My.Settings.App_PathReportIssue)
+
+            Catch ex As Exception
+                ErrorHandler.DisplayMessage(ex)
+
+            End Try
+
+        End Sub
+
+        Public Sub OpenProblemStepRecorder()
+            Dim filePath As String
+            Try
+                filePath = "C:\Windows\System32\psr.exe"
+                System.Diagnostics.Process.Start(filePath)
 
             Catch ex As Exception
                 ErrorHandler.DisplayMessage(ex)
@@ -151,11 +158,14 @@ Namespace Scripts
         End Sub
 
         Public Sub OpenReadMe()
-            System.Diagnostics.Process.Start(My.Settings.App_PathReadMe)
-        End Sub
+            Try
+                System.Diagnostics.Process.Start(My.Settings.App_PathReadMe)
 
-        Public Sub OpenNewIssue()
-            System.Diagnostics.Process.Start(My.Settings.App_PathReportIssue)
+            Catch ex As Exception
+                ErrorHandler.DisplayMessage(ex)
+
+            End Try
+
         End Sub
 
         Public Sub OpenSettings()
@@ -185,61 +195,16 @@ Namespace Scripts
 
         Public Sub OpenSnippingTool()
             Dim filePath As String
-            Dim myShell As Object
             Try
-                myShell = CreateObject("WScript.Shell")
-                If 0 < Len(Environ("ProgramW6432")) Then 'determine whether Windows is 64-bit or 32-bit:
+                If System.Environment.Is64BitOperatingSystem Then
                     filePath = "C:\Windows\sysnative\SnippingTool.exe"
                 Else
                     filePath = "C:\Windows\system32\SnippingTool.exe"
                 End If
-                myShell.Run(filePath)
+                System.Diagnostics.Process.Start(filePath)
 
             Catch ex As Exception
                 ErrorHandler.DisplayMessage(ex)
-            Finally
-                myShell = Nothing
-            End Try
-
-        End Sub
-
-        Public Sub OpenProblemStepRecorder()
-            Dim filePath As String
-            Dim myShell As Object
-            Try
-                myShell = CreateObject("WScript.Shell")
-                filePath = "C:\Windows\System32\psr.exe"
-                myShell.Run(filePath)
-
-            Catch ex As Exception
-                ErrorHandler.DisplayMessage(ex)
-            Finally
-                myShell = Nothing
-            End Try
-
-        End Sub
-
-#End Region
-
-#Region "| Subroutines |"
-
-        Public Sub OpenFile(ByVal fileName As String)
-            Dim pStart As New System.Diagnostics.Process
-            Try
-                If fileName = String.Empty Then Exit Try
-                pStart.StartInfo.FileName = fileName
-                pStart.Start()
-
-            Catch ex As System.ComponentModel.Win32Exception
-                'MessageBox.Show("No application Is assicated To this file type." & vbCrLf & vbCrLf & pstrFile, "No action taken.", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Exit Try
-
-            Catch ex As Exception
-                ErrorHandler.DisplayMessage(ex)
-                Exit Try
-
-            Finally
-                pStart.Dispose()
 
             End Try
 
