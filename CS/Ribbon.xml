@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+
+	<ribbon>
+
+		<tabs>
+			<tab
+				id="tabFavorites"
+				getLabel="GetLabelText"
+				insertAfterMso="TabHome"
+				>
+				<group
+					id="grpWorksheet"
+					label="Worksheet"
+          imageMso="FileSave"
+					>
+					<button
+						idMso="FileSave"
+						size="large"
+					/>
+					<button
+						idMso="FileSaveAs"
+						size="large"
+					 />
+				</group>
+
+				<group
+					id="grpEdit"
+					label="Edit"
+          imageMso="Undo"
+					>
+					<gallery
+					  idMso="Undo"
+					  size="large"
+					/>
+					<button
+						idMso="Copy"
+						size="large"
+					/>
+					<button
+							id="btnCopyVisibleCells"
+							label="Copy Visible"
+							onAction="OnAction"
+							imageMso="Copy"
+							size="large"
+							screentip="Copy Visible Cells"
+							supertip="Copies only visible cells from a selection"
+							/>
+					<button
+							idMso="Cut"
+							size="large"
+							/>
+					<splitButton
+						idMso="PasteMenu"
+						size="large"
+					/>
+					<button
+						idMso="Spelling"
+						size="large"
+					/>
+				</group>
+
+				<group
+					id="grpPrint"
+					label="Print"
+          imageMso="FilePrint"
+					>
+					<button
+						idMso="PageSetupSheetDialog"
+						label="Setup"
+						size="large"
+						imageMso="ViewPageLayoutView"
+					/>
+					<button
+						idMso="FilePrintPreview"
+						label="Preview"
+						size="large"
+					/>
+					<button
+						idMso="FilePrint"
+						size="large"
+					/>
+				</group>
+
+				<group
+					id="grpProgram"
+					label="Program"
+          imageMso="FileNew"
+					>
+					<button
+						idMso="FileNew"
+						size="large"
+					/>
+					<button
+						idMso="FileOpen"
+						size="large"
+					/>
+					<button
+						idMso="FileClose"
+						size="large"
+					/>
+					<toggleButton
+						idMso="FileProperties"
+						size="large"
+					/>
+					<button
+						idMso="ApplicationOptionsDialog"
+						label="Options"
+						size="large"
+					/>
+					<button
+						idMso="FileExit"
+						label="Exit"
+						size="large"
+						imageMso="DeclineInvitation"
+					/>
+				</group>
+				<group
+						id="grpCalculator"
+						label="Evaluate"
+						imageMso="Calculator">
+					<button
+							idMso="Calculator"
+							label="Windows Calculator"
+							size="large"
+							screentip="Windows Calculator"
+							supertip="By default, Calculator runs in standard mode, which resembles a four-function calculator. More advanced functions are available in scientific mode."
+							/>
+					<button
+							idMso="CalculateNow"
+							size="large"
+							/>
+				</group>
+				<group
+						id="grpAnnotation"
+						label="Annotate"
+						imageMso="Camera">
+					<button
+							idMso="Camera"
+							label="Excel Camera"
+							size="large"
+							screentip="Microsoft Excel Camera"
+							supertip="This tool allows you to take a snapshot of a selected datasheet portion, it also syncs the data with the image; whenever you make changes to the original data set, live image gets updated, showing you the latest cells values. "
+							/>
+					<button
+							id="btnSnippingTool"
+							label="Snipping Tool"
+							onAction="OnAction"
+							getImage="GetButtonImage"
+							size="large"
+							screentip="Microsoft Snipping Tool"
+							supertip="Snipping Tool is a screenshot utility included in Microsoft Windows. It can take screenshots of an open window, rectangular areas, a free-form area, or the entire screen."
+							/>
+					<button
+							id="btnProblemStepRecorder"
+							label="Record Steps"
+							onAction="OnAction"
+							getImage="GetButtonImage"
+							size="large"
+							screentip="Microsoft Problem Steps Recorder"
+							supertip="Problem Steps Recorder or PSR records the actions you take on your computer which you can then send to the person or group helping you with your computer problem."
+							/>
+				</group>
+				<group
+						id="grpOptions"
+						label="Options"
+						imageMso="PropertySheet">
+					<button
+							id="btnSettings"
+							label="Add-In Settings"
+							onAction="OnAction"
+							imageMso="PropertySheet"
+							size="large"
+							screentip="Add-In Settings Form"
+							supertip="This opens a user form with a list of custom properties stored in the file."
+							/>
+				</group>
+
+				<group
+						id="grpHelp"
+						label="Help"
+						imageMso="Help">
+					<button
+							id="btnOpenReadMe"
+							label="How To...   "
+							onAction="OnAction"
+							imageMso="Help"
+							size="large"
+							screentip="How To..."
+							supertip="This opens the read me page with detailed instructions of the Add-In functionality."
+							/>
+					<button
+							id="btnOpenNewIssue"
+							label="Report Issue"
+							onAction="OnAction"
+							imageMso="MacroSecurity"
+							size="large"
+							screentip="Report An Issue"
+							supertip="This will open a new issue page. The user will need to login to raise an issue."
+							/>
+				</group>
+				<group
+						id="grpAbout"
+						label="About"
+						imageMso="Info">
+					<labelControl
+							id="lblDescription"
+							label="Add-In Name: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="lblReleaseDate"
+							label="Release Date: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="lblCopyright"
+							label="Copyright: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtDescription"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtReleaseDate"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtCopyright"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+				</group>
+
+			</tab>
+		</tabs>
+
+	</ribbon>
+
+</customUI>
