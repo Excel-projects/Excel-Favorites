@@ -9,7 +9,7 @@ Imports System.Reflection
 
 Namespace Scripts
 
-    Public Class Form
+    Public Class AssemblyInfo
 
         Public Sub SetIcon(ByRef currentForm As System.Windows.Forms.Form, ByRef bmp As Bitmap)
             Try

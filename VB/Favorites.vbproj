@@ -254,7 +254,7 @@
   <ItemGroup>
     <AppDesigner Include="My Project\" />
     <Compile Include="Scripts\ErrorHandler.vb" />
-    <Compile Include="Scripts\Form.vb" />
+    <Compile Include="Scripts\AssemblyInfo.vb" />
     <Compile Include="Scripts\Ribbon.vb" />
     <Compile Include="TaskPane\Settings.Designer.vb">
       <DependentUpon>Settings.vb</DependentUpon>
