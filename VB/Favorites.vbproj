@@ -315,6 +315,9 @@
   <ItemGroup>
     <None Include="Resources\snipping_tool.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcelAddin.ico" />
+  </ItemGroup>
   <!-- Include the build rules for a Visual Basic project. -->
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
