@@ -4,6 +4,15 @@
 * text=auto
 
 ###############################################################################
+# Adjust your .gitattributes file to treat ClickOnce files as non-text
+###############################################################################
+*.manifest binary
+*.application binary
+*.deploy binary
+#*.config binary
+#*.vsto binary
+
+###############################################################################
 # Set default behavior for command prompt diff.
 #
 # This is need for earlier builds of msysgit that does not have it on by
