@@ -85,7 +85,7 @@ How to install the VBA version
 How to install the VSTO version
 1. Download AnthonyDuguid.pfx And Install At Root Level [![download Key](https://img.shields.io/badge/download-Key-brightgreen.svg)](https://github.com/aduguid/MicrosoftExcelFavorites/VB/blob/master/AnthonyDuguid.pfx?raw=true "Download AnthonyDuguid.pfx And Install At Root Level For VSTO")
 2. Download and run the setup.exe file. 
-[![download VSTO](https://img.shields.io/badge/download-VSTO-brightgreen.svg)](https://github.com/aduguid/MicrosoftExcelFavorites/CS/blob/master/publish/setup.exe?raw=true "Download Setup.exe Install File")
+[![download VSTO](https://img.shields.io/badge/download-VSTO-brightgreen.svg)](https://github.com/aduguid/MicrosoftExcelFavorites/CS/publish/blob/master/setup.exe?raw=true "Download Setup.exe Install File")
 
 <br>
 
