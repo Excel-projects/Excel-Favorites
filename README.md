@@ -1,6 +1,8 @@
 <img align="left" src="Images/ReadMe/App.png" width="64px" >
 
 # Microsoft Excel Favorites <span class="Application_Version">3.0.0.0</span> 
+
+[![Join the chat at https://gitter.im/MicrosoftExcelFavorites/Lobby](https://badges.gitter.im/MicrosoftExcelFavorites/Lobby.svg)](https://gitter.im/MicrosoftExcelFavorites/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
 ![current_build Office_2013](https://img.shields.io/badge/current_build-Office_2013-red.svg)
 
