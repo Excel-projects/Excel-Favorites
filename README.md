@@ -3,7 +3,7 @@
 # Microsoft Excel Favorites
 
 [![Join the chat at https://gitter.im/MicrosoftExcelFavorites/Lobby](https://badges.gitter.im/MicrosoftExcelFavorites/Lobby.svg)](https://gitter.im/MicrosoftExcelFavorites/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
 [![release](http://github-release-version.herokuapp.com/github/aduguid/MicrosoftExcelFavorites/release.svg?style=flat)](https://github.com/aduguid/MicrosoftExcelFavorites/releases/latest)
 
 
