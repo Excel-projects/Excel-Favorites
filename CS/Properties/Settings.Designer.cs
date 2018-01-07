@@ -34,7 +34,7 @@ namespace Favorites.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/README.md")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/Office-projects/ExcelFavorites/blob/master/README.md")]
         public string App_PathReadMe {
             get {
                 return ((string)(this["App_PathReadMe"]));
@@ -46,7 +46,7 @@ namespace Favorites.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/aduguid/MicrosoftExcelFavorites/issues/new")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/Office-projects/ExcelFavorites/issues/new")]
         public string App_PathReportIssue {
             get {
                 return ((string)(this["App_PathReportIssue"]));
