@@ -29,21 +29,21 @@
     <AssemblyName>Favorites</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
+    <IsWebBootstrapper>True</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>publish\</PublishUrl>
-    <InstallUrl />
+    <InstallUrl>https://raw.githubusercontent.com/aduguid/MicrosoftExcelFavorites/master/CS/publish/</InstallUrl>
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.0</ApplicationVersion>
-    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
+    <AutoIncrementApplicationRevision>false</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
-    <UpdateInterval>7</UpdateInterval>
+    <UpdateInterval>0</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <IsWebBootstrapper>False</IsWebBootstrapper>
     <ProductName>Excel Addin Favorites</ProductName>
     <PublisherName>Anthony Duguid</PublisherName>
-    <SupportUrl />
+    <SupportUrl>https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/README.md</SupportUrl>
     <FriendlyName>Excel Addin Favorites</FriendlyName>
-    <OfficeApplicationDescription />
+    <OfficeApplicationDescription>This is an Excel Add-In written in Visual Studio Community 2017 .NET. It gives the user a custom ribbon. Key distinctive attributes include dedicated buttons for copying visible cells, Excel%27s camera feature, Snipping Tool, Problem Steps Recorder %28PSR%29 and Windows Calculator.</OfficeApplicationDescription>
     <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
@@ -60,11 +60,6 @@
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
       <Visible>False</Visible>
       <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
@@ -283,8 +278,8 @@
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Excel" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\16.0\Excel\InstallRoot\Path#excel.exe" DebugInfoCommandLine="/x" AddItemTemplatesGuid="{51063C3A-E220-4D12-8922-BDA915ACD783}" />
-        <Host Name="Excel" GeneratedCodeNamespace="Favorites" IconIndex="0">
-          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
+        <Host Name="Excel" GeneratedCodeNamespace="Favorites" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
+          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" PublishedHash="3EB665FAC8BB52BD2565DEDBFFEFFB77987C73A3" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>
