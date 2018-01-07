@@ -64,7 +64,7 @@ Partial Friend NotInheritable Class MySettings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("https://github.com/aduguid/MicrosoftExcelFavorites/blob/master/README.md")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("https://github.com/Office-projects/ExcelFavorites/blob/master/README.md")>  _
     Public Property App_PathReadMe() As String
         Get
             Return CType(Me("App_PathReadMe"),String)
@@ -76,7 +76,7 @@ Partial Friend NotInheritable Class MySettings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("https://github.com/aduguid/MicrosoftExcelFavorites/issues/new")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("https://github.com/Office-projects/ExcelFavorites/issues/new")>  _
     Public Property App_PathReportIssue() As String
         Get
             Return CType(Me("App_PathReportIssue"),String)
