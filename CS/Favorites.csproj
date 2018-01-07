@@ -196,6 +196,9 @@
     <EmbeddedResource Include="TaskPane\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TaskPane\WorksheetList.resx">
+      <DependentUpon>WorksheetList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="AnthonyDuguid.pfx" />
     <None Include="app.config" />
     <None Include="packages.config" />
@@ -216,6 +219,12 @@
     </Compile>
     <Compile Include="TaskPane\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskPane\WorksheetList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskPane\WorksheetList.Designer.cs">
+      <DependentUpon>WorksheetList.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -239,6 +248,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ExcelAddin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\arrow_refresh.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

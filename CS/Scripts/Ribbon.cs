@@ -15,6 +15,8 @@ namespace Favorites.Scripts
         public static Ribbon ribbonref;
         public TaskPane.Settings mySettings;
         public Microsoft.Office.Tools.CustomTaskPane myTaskPaneSettings;
+        public TaskPane.WorksheetList myWorksheetList;
+        public Microsoft.Office.Tools.CustomTaskPane myTaskPaneWorksheetList;
 
         #region | Ribbon Events |
 
@@ -122,6 +124,9 @@ namespace Favorites.Scripts
                     case "btnSettings":
                         OpenSettings();
                         break;
+                    case "btnSheetVisibility":
+                        OpenSheetVisibility();
+                        break;
                     case "btnSnippingTool":
                         OpenSnippingTool();
                         break;
@@ -203,6 +208,38 @@ namespace Favorites.Scripts
             try
             {
                 System.Diagnostics.Process.Start(Properties.Settings.Default.App_PathReadMe);
+
+            }
+            catch (Exception ex)
+            {
+                ErrorHandler.DisplayMessage(ex);
+            }
+        }
+
+        public void OpenSheetVisibility()
+        {
+            try
+            {
+                if (myTaskPaneWorksheetList != null)
+                {
+                    if (myTaskPaneWorksheetList.Visible == true)
+                    {
+                        myTaskPaneWorksheetList.Visible = false;
+                    }
+                    else
+                    {
+                        myTaskPaneWorksheetList.Visible = true;
+                    }
+                }
+                else
+                {
+                    myWorksheetList = new TaskPane.WorksheetList();
+                    myTaskPaneWorksheetList = Globals.ThisAddIn.CustomTaskPanes.Add(myWorksheetList, "Worksheet List");
+                    myTaskPaneWorksheetList.DockPosition = Office.MsoCTPDockPosition.msoCTPDockPositionRight;
+                    myTaskPaneWorksheetList.DockPositionRestrict = Office.MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange;
+                    myTaskPaneWorksheetList.Width = 300;
+                    myTaskPaneWorksheetList.Visible = true;
+                }
 
             }
             catch (Exception ex)

@@ -174,6 +174,15 @@
 							screentip="Add-In Settings Form"
 							supertip="This opens a user form with a list of custom properties stored in the file."
 							/>
+					<button
+							id="btnSheetVisibility"
+							label="Worksheet Visibility"
+							onAction="OnAction"
+							imageMso="WatchWindow"
+							size="large"
+							screentip="Worksheet Visibility Taskpane"
+							supertip="This opens a taskpane to view or update the each worksheet's visibility."
+							/>
 				</group>
 
 				<group
