@@ -103,7 +103,7 @@ Namespace Scripts
                 End Select
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
 
             End Try
 
