@@ -1,5 +1,6 @@
 <img align="left" src="Images/ReadMe/App.png" width="64px" >
 
+
 # Microsoft Excel Favorites
 
 [![Join the chat at https://gitter.im/MicrosoftExcelFavorites/Lobby](https://badges.gitter.im/MicrosoftExcelFavorites/Lobby.svg)](https://gitter.im/MicrosoftExcelFavorites/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
