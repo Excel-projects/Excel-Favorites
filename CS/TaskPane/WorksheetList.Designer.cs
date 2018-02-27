@@ -39,6 +39,9 @@
             this.lstWorksheets = new System.Windows.Forms.ListView();
             this.tspWorksheetMenu = new System.Windows.Forms.ToolStrip();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tsbSortAsc = new System.Windows.Forms.ToolStripButton();
+            this.tsbSortDesc = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuSetVisiblity.SuspendLayout();
             this.tspWorksheetMenu.SuspendLayout();
             this.SuspendLayout();
@@ -115,7 +118,10 @@
             // 
             this.tspWorksheetMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tspWorksheetMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbRefresh});
+            this.tsbRefresh,
+            this.toolStripSeparator1,
+            this.tsbSortAsc,
+            this.tsbSortDesc});
             this.tspWorksheetMenu.Location = new System.Drawing.Point(0, 0);
             this.tspWorksheetMenu.Name = "tspWorksheetMenu";
             this.tspWorksheetMenu.Size = new System.Drawing.Size(300, 25);
@@ -130,6 +136,29 @@
             this.tsbRefresh.Size = new System.Drawing.Size(69, 22);
             this.tsbRefresh.Text = " Refresh";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
+            // 
+            // tsbSortAsc
+            // 
+            this.tsbSortAsc.Image = global::Favorites.Properties.Resources.bullet_arrow_up;
+            this.tsbSortAsc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSortAsc.Name = "tsbSortAsc";
+            this.tsbSortAsc.Size = new System.Drawing.Size(47, 22);
+            this.tsbSortAsc.Text = "A-Z";
+            this.tsbSortAsc.Click += new System.EventHandler(this.tsbSortAsc_Click);
+            // 
+            // tsbSortDesc
+            // 
+            this.tsbSortDesc.Image = global::Favorites.Properties.Resources.bullet_arrow_down;
+            this.tsbSortDesc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSortDesc.Name = "tsbSortDesc";
+            this.tsbSortDesc.Size = new System.Drawing.Size(47, 22);
+            this.tsbSortDesc.Text = "Z-A";
+            this.tsbSortDesc.Click += new System.EventHandler(this.tsbSortDesc_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // WorksheetList
             // 
@@ -159,5 +188,8 @@
         private System.Windows.Forms.ListView lstWorksheets;
         private System.Windows.Forms.ToolStrip tspWorksheetMenu;
         private System.Windows.Forms.ToolStripButton tsbRefresh;
+        private System.Windows.Forms.ToolStripButton tsbSortAsc;
+        private System.Windows.Forms.ToolStripButton tsbSortDesc;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

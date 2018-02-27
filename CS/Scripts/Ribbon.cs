@@ -133,6 +133,9 @@ namespace Favorites.Scripts
                     case "btnProblemStepRecorder":
                         OpenProblemStepRecorder();
                         break;
+                    case "btnFileList":
+                        CreateFileList();
+                        break;
                     case "btnOpenReadMe":
                         OpenReadMe();
                         break;
@@ -173,6 +176,47 @@ namespace Favorites.Scripts
             {
                 if (visibleRange != null)
                     Marshal.ReleaseComObject(visibleRange);
+            }
+        }
+
+        public void CreateFileList()
+        {
+            string filePath = Properties.Settings.Default.Option_PathFileListing;
+            try
+            {
+                ErrorHandler.CreateLogRecord();
+                DialogResult msgDialogResult = DialogResult.None;
+                FolderBrowserDialog dlg = new FolderBrowserDialog();
+                if (Properties.Settings.Default.Option_PathFileListingSelect == true)
+                {
+                    dlg.RootFolder = Environment.SpecialFolder.MyComputer;
+                    dlg.SelectedPath = filePath;
+                    msgDialogResult = dlg.ShowDialog();
+                    filePath = dlg.SelectedPath;
+                }
+                if (msgDialogResult == DialogResult.OK | Properties.Settings.Default.Option_PathFileListingSelect == false)
+                {
+                    filePath += @"\";
+                    string scriptCommands = string.Empty;
+                    string currentDate = DateTime.Now.ToString("dd.MMM.yyyy_hh.mm.tt");
+                    string batchFileName = filePath + "FileListing_" + currentDate + "_" + Environment.UserName + ".bat";
+                    scriptCommands = "echo off" + Environment.NewLine;
+                    scriptCommands += "cd %1" + Environment.NewLine;
+                    scriptCommands += @"dir """ + filePath + @""" /s /a-h /b /-p /o:gen >""" + filePath + "FileListing_" + currentDate + "_" + Environment.UserName + @".csv""" + Environment.NewLine;
+                    scriptCommands += @"""" + filePath + "FileListing_" + currentDate + "_" + Environment.UserName + @".csv""" + Environment.NewLine;
+                    scriptCommands += "cd .. " + Environment.NewLine;
+                    scriptCommands += "echo on" + Environment.NewLine;
+                    System.IO.File.WriteAllText(batchFileName, scriptCommands);
+                    AssemblyInfo.OpenFile(batchFileName);
+                }
+            }
+            catch (System.UnauthorizedAccessException)
+            {
+                MessageBox.Show("You don't have access to this folder, bro!" + Environment.NewLine + Environment.NewLine + filePath, "No action taken.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                ErrorHandler.DisplayMessage(ex);
             }
         }
 

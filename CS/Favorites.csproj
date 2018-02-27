@@ -255,6 +255,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\bullet_arrow_down.png" />
+    <None Include="Resources\bullet_arrow_up.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

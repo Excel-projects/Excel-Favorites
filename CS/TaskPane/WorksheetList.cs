@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Favorites.Scripts;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Favorites.TaskPane
 {
@@ -117,6 +118,69 @@ namespace Favorites.TaskPane
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
             LoadListview();
+        }
+
+        private void tsbSortAsc_Click(object sender, EventArgs e)
+        {
+            System.Collections.ArrayList al = new System.Collections.ArrayList();
+            Excel.Workbook wb = Globals.ThisAddIn.Application.ActiveWorkbook;
+            int x = 0;
+            try
+            {
+                foreach (Excel.Worksheet s in wb.Sheets)
+                {
+                    al.Add(s.Name);
+                }
+                al.Sort();
+
+                foreach (string item in al)
+                {
+                    Excel.Worksheet s = (Excel.Worksheet)wb.Sheets[item];
+                    //s.Move(wb.Sheets[wb.Sheets.Count]);
+                    s.Move(wb.Sheets[x+=1]);
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorHandler.DisplayMessage(ex);
+            }
+            finally
+            {
+                LoadListview();
+            }
+
+        }
+
+        private void tsbSortDesc_Click(object sender, EventArgs e)
+        {
+            System.Collections.ArrayList al = new System.Collections.ArrayList();
+            Excel.Workbook wb = Globals.ThisAddIn.Application.ActiveWorkbook;
+            int x = 0;
+            try
+            {
+                foreach (Excel.Worksheet s in wb.Sheets)
+                {
+                    al.Add(s.Name);
+                }
+                al.Sort();
+
+                foreach (string item in al)
+                {
+                    Excel.Worksheet s = (Excel.Worksheet)wb.Sheets[item];
+                    int y = wb.Sheets.Count - x;
+                    s.Move(wb.Sheets[y]);
+                    x += 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorHandler.DisplayMessage(ex);
+            }
+            finally
+            {
+                LoadListview();
+            }
+
         }
     }
 }

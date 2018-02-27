@@ -91,5 +91,29 @@ namespace Favorites.Properties {
                 this["App_PathDeployData"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp")]
+        public string Option_PathFileListing {
+            get {
+                return ((string)(this["Option_PathFileListing"]));
+            }
+            set {
+                this["Option_PathFileListing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Option_PathFileListingSelect {
+            get {
+                return ((bool)(this["Option_PathFileListingSelect"]));
+            }
+            set {
+                this["Option_PathFileListingSelect"] = value;
+            }
+        }
     }
 }

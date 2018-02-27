@@ -29,35 +29,38 @@
 					label="Edit"
           imageMso="Undo"
 					>
+					<button
+						idMso="Spelling"
+						size="normal"
+					/>
 					<gallery
 					  idMso="Undo"
-					  size="large"
+					  size="normal"
+					/>
+					<splitButton
+						idMso="PasteMenu"
+						size="normal"
+					/>
+					<separator
+						id="separator1"
+					/>
+					<button
+						idMso="Cut"
+						size="normal"
 					/>
 					<button
 						idMso="Copy"
-						size="large"
+						size="normal"
 					/>
 					<button
 							id="btnCopyVisibleCells"
 							label="Copy Visible"
 							onAction="OnAction"
 							imageMso="Copy"
-							size="large"
+							size="normal"
 							screentip="Copy Visible Cells"
 							supertip="Copies only visible cells from a selection"
 							/>
-					<button
-							idMso="Cut"
-							size="large"
-							/>
-					<splitButton
-						idMso="PasteMenu"
-						size="large"
-					/>
-					<button
-						idMso="Spelling"
-						size="large"
-					/>
 				</group>
 
 				<group
@@ -68,17 +71,17 @@
 					<button
 						idMso="PageSetupSheetDialog"
 						label="Setup"
-						size="large"
+						size="normal"
 						imageMso="ViewPageLayoutView"
 					/>
 					<button
 						idMso="FilePrintPreview"
 						label="Preview"
-						size="large"
+						size="normal"
 					/>
 					<button
 						idMso="FilePrint"
-						size="large"
+						size="normal"
 					/>
 				</group>
 
@@ -89,29 +92,32 @@
 					>
 					<button
 						idMso="FileNew"
-						size="large"
+						size="normal"
 					/>
 					<button
 						idMso="FileOpen"
-						size="large"
+						size="normal"
 					/>
 					<button
 						idMso="FileClose"
-						size="large"
+						size="normal"
+					/>
+					<separator
+						id="separator2"
 					/>
 					<toggleButton
 						idMso="FileProperties"
-						size="large"
+						size="normal"
 					/>
 					<button
 						idMso="ApplicationOptionsDialog"
 						label="Options"
-						size="large"
+						size="normal"
 					/>
 					<button
 						idMso="FileExit"
 						label="Exit"
-						size="large"
+						size="normal"
 						imageMso="DeclineInvitation"
 					/>
 				</group>
@@ -121,14 +127,46 @@
 						imageMso="Calculator">
 					<button
 							idMso="Calculator"
-							label="Windows Calculator"
-							size="large"
+							label="Calculator"
+							size="normal"
 							screentip="Windows Calculator"
 							supertip="By default, Calculator runs in standard mode, which resembles a four-function calculator. More advanced functions are available in scientific mode."
 							/>
 					<button
 							idMso="CalculateNow"
-							size="large"
+							size="normal"
+							/>
+					<toggleButton
+							idMso="ShowFormulas"
+							size="normal"
+							/>
+				</group>
+				<group
+						id="grpOptions"
+						label="Options"
+						imageMso="PropertySheet">
+					<button
+							id="btnSheetVisibility"
+							label="Worksheet List"
+							onAction="OnAction"
+							imageMso="WatchWindow"
+							size="normal"
+							screentip="Worksheet List Taskpane"
+							supertip="This opens a taskpane to view or update the each worksheet's visibility."
+							/>
+					<button
+							id="btnFileList"
+							label="Create File List"
+							onAction="OnAction"
+							imageMso="GetExternalDataFromText"
+							size="normal"
+							screentip="Create A File Listing"
+							supertip="This will create a file listing of the user selected path recursively. It will save the .csv and .bat file in the root folder selected."
+							keytip="LST"
+							/>
+					<button
+							idMso="ComAddInsDialog"
+							size="normal"
 							/>
 				</group>
 				<group
@@ -138,7 +176,7 @@
 					<button
 							idMso="Camera"
 							label="Excel Camera"
-							size="large"
+							size="normal"
 							screentip="Microsoft Excel Camera"
 							supertip="This tool allows you to take a snapshot of a selected datasheet portion, it also syncs the data with the image; whenever you make changes to the original data set, live image gets updated, showing you the latest cells values. "
 							/>
@@ -147,7 +185,7 @@
 							label="Snipping Tool"
 							onAction="OnAction"
 							getImage="GetButtonImage"
-							size="large"
+							size="normal"
 							screentip="Microsoft Snipping Tool"
 							supertip="Snipping Tool is a screenshot utility included in Microsoft Windows. It can take screenshots of an open window, rectangular areas, a free-form area, or the entire screen."
 							/>
@@ -156,35 +194,11 @@
 							label="Record Steps"
 							onAction="OnAction"
 							getImage="GetButtonImage"
-							size="large"
+							size="normal"
 							screentip="Microsoft Problem Steps Recorder"
 							supertip="Problem Steps Recorder or PSR records the actions you take on your computer which you can then send to the person or group helping you with your computer problem."
 							/>
 				</group>
-				<group
-						id="grpOptions"
-						label="Options"
-						imageMso="PropertySheet">
-					<button
-							id="btnSettings"
-							label="Add-In Settings"
-							onAction="OnAction"
-							imageMso="PropertySheet"
-							size="large"
-							screentip="Add-In Settings Form"
-							supertip="This opens a user form with a list of custom properties stored in the file."
-							/>
-					<button
-							id="btnSheetVisibility"
-							label="Worksheet Visibility"
-							onAction="OnAction"
-							imageMso="WatchWindow"
-							size="large"
-							screentip="Worksheet Visibility Taskpane"
-							supertip="This opens a taskpane to view or update the each worksheet's visibility."
-							/>
-				</group>
-
 				<group
 						id="grpHelp"
 						label="Help"
@@ -194,7 +208,7 @@
 							label="How To...   "
 							onAction="OnAction"
 							imageMso="Help"
-							size="large"
+							size="normal"
 							screentip="How To..."
 							supertip="This opens the read me page with detailed instructions of the Add-In functionality."
 							/>
@@ -203,9 +217,18 @@
 							label="Report Issue"
 							onAction="OnAction"
 							imageMso="MacroSecurity"
-							size="large"
+							size="normal"
 							screentip="Report An Issue"
 							supertip="This will open a new issue page. The user will need to login to raise an issue."
+							/>
+					<button
+							id="btnSettings"
+							label="Settings"
+							onAction="OnAction"
+							imageMso="PropertySheet"
+							size="normal"
+							screentip="Add-In Settings Form"
+							supertip="This opens a user form with a list of custom properties stored in the file."
 							/>
 				</group>
 				<group
