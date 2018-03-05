@@ -14,7 +14,7 @@ This Add-In gives the user a custom favorites ribbon. Key distinctive attributes
 [![fork this repo](http://githubbadges.com/fork.svg?user=Office-projects&repo=ExcelFavorites&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/ExcelFavorites/fork)
 --->
 <h1 align="left">
-  <img src="Images/ReadMe/vsto.excel.favorites3.png" alt="Ribbon" />
+  <img src="Images/ReadMe/vsto.excel.favorites4.png" alt="Ribbon" />
 </h1>
 
 <br>
