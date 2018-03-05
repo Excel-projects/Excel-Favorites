@@ -30,8 +30,8 @@ This Add-In gives the user a custom favorites ribbon. Key distinctive attributes
     - <a href="#print-group">Print</a>   
     - <a href="#program-group">Program</a>  
     - <a href="#evaluate-group">Evaluate</a>  
-    - <a href="#annotation-group">Annotate</a>  
     - <a href="#options-group">Options</a>  
+    - <a href="#annotation-group">Annotate</a>  
     - <a href="#help">Help</a>
     - <a href="#about">About</a>
 
