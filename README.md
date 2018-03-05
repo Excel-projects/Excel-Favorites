@@ -6,7 +6,7 @@
 [![Latest Release](https://img.shields.io/github/release/Office-projects/Excel-Favorites.svg?label=latest%20release)](https://github.com/Office-projects/Excel-Favorites/releases)
 [![Github commits (since latest release)](https://img.shields.io/github/commits-since/Office-projects/Excel-Favorites/latest.svg)](https://github.com/Office-projects/Excel-Favorites)
 
-:new: I'm currently working on the Web Add-In in JavaScript.
+:new: I'm currently working on the Web Add-In in JavaScript. The most complete version is C#. 
 
 This Add-In gives the user a custom favorites ribbon. Key distinctive attributes include dedicated buttons for changing the visiblity/sort order of sheets, [copying visible cells](https://support.office.com/en-us/article/Copy-visible-cells-only-6e3a1f01-2884-4332-b262-8b814412847e), [Excel's camera feature](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-mso_winother/how-to-use-camera-function-in-microsoft-excel/44a97349-f694-4bd3-a5ca-e4097f6e9437?auth=1), [Snipping Tool](https://support.microsoft.com/en-au/help/4027213/windows-open-snipping-tool-and-take-a-screenshot), [Problem Steps Recorder (PSR)](https://support.microsoft.com/en-au/help/22878/windows-10-record-steps) and [Windows Calculator](https://en.wikipedia.org/wiki/Windows_Calculator).
 <!---
