@@ -3,7 +3,8 @@
 
 [![Join the chat at https://gitter.im/MicrosoftExcelFavorites/Lobby](https://badges.gitter.im/MicrosoftExcelFavorites/Lobby.svg)](https://gitter.im/MicrosoftExcelFavorites/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
-[![release](http://github-release-version.herokuapp.com/github/Office-projects/ExcelFavorites/release.svg?style=flat)](https://github.com/Office-projects/ExcelFavorites/releases/latest)
+[![Latest Release](https://img.shields.io/github/release/Office-projects/Excel-Favorites.svg?label=latest%20release)](https://github.com/Office-projects/Excel-Favorites/releases)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/Office-projects/Excel-Favorites/latest.svg)](https://github.com/Office-projects/Excel-Favorites)
 
 :new: I'm currently working on the Web Add-In in JavaScript.
 
