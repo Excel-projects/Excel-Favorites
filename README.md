@@ -9,7 +9,7 @@ This Add-In gives the user a custom favorites ribbon. Key distinctive attributes
 [![Latest Release](https://img.shields.io/github/release/Office-projects/Excel-Favorites.svg?label=latest%20release)](https://github.com/Office-projects/Excel-Favorites/releases)
 [![Github commits (since latest release)](https://img.shields.io/github/commits-since/Office-projects/Excel-Favorites/latest.svg)](https://github.com/Office-projects/Excel-Favorites)
 [![GitHub issues](https://img.shields.io/github/issues/Office-projects/Excel-Favorites.svg)](https://github.com/Office-projects/Excel-Favorites/issues)
-[![Github All Releases](https://img.shields.io/github/downloads/Office-projects/Excel-Favorites/total.svg)](https://github.com/Office-projects/Excel-Favorites/releases)
+<!--[![Github All Releases](https://img.shields.io/github/downloads/Office-projects/Excel-Favorites/total.svg)](https://github.com/Office-projects/Excel-Favorites/releases)-->
 
 <h1 align="left">
   <img src="Images/ReadMe/vsto.excel.ribbon.favorites.gif" alt="Ribbon" />
