@@ -7,7 +7,7 @@ This Add-In gives the user a custom favorites ribbon. Key distinctive attributes
 [![Join the chat at https://gitter.im/MicrosoftExcelFavorites/Lobby](https://badges.gitter.im/MicrosoftExcelFavorites/Lobby.svg)](https://gitter.im/MicrosoftExcelFavorites/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
 [![Latest Release](https://img.shields.io/github/release/Office-projects/Excel-Favorites.svg?label=latest%20release)](https://github.com/Office-projects/Excel-Favorites/releases)
-[![Github commits (since latest release)](https://img.shields.io/github/commits-since/Office-projects/Excel-Favorites/latest.svg)](https://github.com/Office-projects/Excel-Favorites)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/Office-projects/Excel-Favorites/latest.svg)](https://github.com/Office-projects/Excel-Favorites/commits/master)
 [![GitHub issues](https://img.shields.io/github/issues/Office-projects/Excel-Favorites.svg)](https://github.com/Office-projects/Excel-Favorites/issues)
 <!--[![Github All Releases](https://img.shields.io/github/downloads/Office-projects/Excel-Favorites/total.svg)](https://github.com/Office-projects/Excel-Favorites/releases)-->
 
@@ -31,44 +31,6 @@ This Add-In gives the user a custom favorites ribbon. Key distinctive attributes
     - <a href="#annotation-group">Annotate</a>  
     - <a href="#help">Help</a>
     - <a href="#about">About</a>
-
-<!---
-         - <a href="#save">Save</a> 
-         - <a href="#save-as">Save As</a> 
-    - <a href="#edit">Edit</a>
-         - <a href="#undo">Undo</a> 
-         - <a href="#copy">Copy</a> 
-         - <a href="#cut">Cut</a> 
-         - <a href="#paste">Paste</a> 
-         - <a href="#spelling">Spelling</a> 
-    - <a href="#print-group">Print</a>   
-         - <a href="#setup">Setup</a> 
-         - <a href="#preview">Preview</a> 
-         - <a href="#print">Print</a> 
-    - <a href="#program-group">Program</a>  
-         - <a href="#new">New</a> 
-         - <a href="#open">Open</a> 
-         - <a href="#close">Close</a> 
-         - <a href="#properties">Properties</a> 
-         - <a href="#options">Options</a> 
-         - <a href="#exit">Exit</a> 
-    - <a href="#evaluate-group">Evaluate</a>  
-         - <a href="#calculator">Windows Calculator</a> 
-         - <a href="#calculate-now">Calculate Now</a> 
-    - <a href="#annotation-group">Annotate</a>  
-         - <a href="#camera">Excel Camera</a> 
-         - <a href="#snip">Snipping Tool</a> 
-         - <a href="#psr">Problem Step Recorder</a> 
-    - <a href="#options-group">Options</a>  
-         - <a href="#settings">Add-In Settings</a> 
-    - <a href="#help">Help</a>
-        - <a href="#how-to">How To...</a>  
-        - <a href="#report-issue">Report Issue</a>  
-    - <a href="#about">About</a>
-        - <a href="#description">Add-in Name</a>
-        - <a href="#install-date">Release Date</a>  
-        - <a href="#copyright">Copyright</a>  
---->
 
 <br>
 
