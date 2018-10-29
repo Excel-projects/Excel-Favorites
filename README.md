@@ -6,10 +6,10 @@ This Add-In gives the user a custom favorites ribbon. Key distinctive attributes
 <!--[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/AnthonyDuguid/1.00)-->
 [![Join the chat at https://gitter.im/MicrosoftExcelFavorites/Lobby](https://badges.gitter.im/MicrosoftExcelFavorites/Lobby.svg)](https://gitter.im/MicrosoftExcelFavorites/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
-[![Latest Release](https://img.shields.io/github/release/Office-projects/Excel-Favorites.svg?label=latest%20release)](https://github.com/Office-projects/Excel-Favorites/releases)
-[![Github commits (since latest release)](https://img.shields.io/github/commits-since/Office-projects/Excel-Favorites/latest.svg)](https://github.com/Office-projects/Excel-Favorites/commits/master)
-[![GitHub issues](https://img.shields.io/github/issues/Office-projects/Excel-Favorites.svg)](https://github.com/Office-projects/Excel-Favorites/issues)
-<!--[![Github All Releases](https://img.shields.io/github/downloads/Office-projects/Excel-Favorites/total.svg)](https://github.com/Office-projects/Excel-Favorites/releases)-->
+[![Latest Release](https://img.shields.io/github/release/Excel-projects/Excel-Favorites.svg?label=latest%20release)](https://github.com/Excel-projects/Excel-Favorites/releases)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/Excel-projects/Excel-Favorites/latest.svg)](https://github.com/Excel-projects/Excel-Favorites/commits/master)
+[![GitHub issues](https://img.shields.io/github/issues/Excel-projects/Excel-Favorites.svg)](https://github.com/Excel-projects/Excel-Favorites/issues)
+<!--[![Github All Releases](https://img.shields.io/github/downloads/Excel-projects/Excel-Favorites/total.svg)](https://github.com/Excel-projects/Excel-Favorites/releases)-->
 
 <h1 align="left">
   <img src="Images/ReadMe/vsto.excel.ribbon.favorites.gif" alt="Ribbon" />
@@ -40,15 +40,15 @@ Instructions for installation of VBA and VSTO versions.
 
 ### VBA
 How to install the VBA version
-1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/Office-projects/ExcelFavorites/raw/master/VBA/Favorites.xlam?raw=true "Download the VBA Add-In").
+1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/Excel-projects/Excel-Favorites/raw/master/VBA/Favorites.xlam?raw=true "Download the VBA Add-In").
 2. Copy the file to the XLSTART folder on your computer.  ```%AppData%\Microsoft\Excel\XLSTART\``` 
 3. Close all open instances of Excel and then launch Excel. The new ribbon should appear.
 
 ### VSTO
 How to install the VSTO version
-1. Download AnthonyDuguid.pfx And Install At Root Level [![download Key](https://img.shields.io/badge/download-Key-brightgreen.svg)](https://github.com/Office-projects/ExcelFavorites/blob/master/CS/AnthonyDuguid.pfx?raw=true "Download AnthonyDuguid.pfx And Install At Root Level For VSTO")
+1. Download AnthonyDuguid.pfx And Install At Root Level [![download Key](https://img.shields.io/badge/download-Key-brightgreen.svg)](https://github.com/Excel-projects/Excel-Favorites/blob/master/CS/AnthonyDuguid.pfx?raw=true "Download AnthonyDuguid.pfx And Install At Root Level For VSTO")
 2. Download and run the setup.exe file. 
-[![download VSTO](https://img.shields.io/badge/download-VSTO-brightgreen.svg)](https://github.com/Office-projects/ExcelFavorites/blob/master/CS/publish/setup.exe?raw=true "Download Setup.exe Install File")
+[![download VSTO](https://img.shields.io/badge/download-VSTO-brightgreen.svg)](https://github.com/Excel-projects/Excel-Favorites/blob/master/CS/publish/setup.exe?raw=true "Download Setup.exe Install File")
 
 <br>
 
