@@ -1,5 +1,5 @@
 
-<img align="left" src="Images/ReadMe/header1.png">
+<img align="left" src="Images/ReadMe/header.png">
 
 This Add-In gives the user a custom favorites ribbon. Key distinctive attributes include dedicated buttons for changing the visibility/sort order of sheets, [copying visible cells](https://support.office.com/en-us/article/Copy-visible-cells-only-6e3a1f01-2884-4332-b262-8b814412847e), [Excel's camera feature](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-mso_winother/how-to-use-camera-function-in-microsoft-excel/44a97349-f694-4bd3-a5ca-e4097f6e9437?auth=1), [Snipping Tool](https://support.microsoft.com/en-au/help/4027213/windows-open-snipping-tool-and-take-a-screenshot), [Problem Steps Recorder (PSR)](https://support.microsoft.com/en-au/help/22878/windows-10-record-steps) and [Windows Calculator](https://en.wikipedia.org/wiki/Windows_Calculator). :new: I'm currently working on the Web Add-In in JavaScript. The most complete version is C#. 
 
@@ -12,7 +12,7 @@ This Add-In gives the user a custom favorites ribbon. Key distinctive attributes
 <!--[![Github All Releases](https://img.shields.io/github/downloads/Excel-projects/Excel-Favorites/total.svg)](https://github.com/Excel-projects/Excel-Favorites/releases)-->
 
 <h1 align="left">
-  <img src="Images/ReadMe/vsto.excel.ribbon.favorites.gif" alt="Ribbon" />
+  <img src="Images/ReadMe/excel.ribbon.gif" />
 </h1>
 
 <br>
