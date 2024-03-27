@@ -58,9 +58,9 @@ How to install the VSTO version
 ## Dependencies
 |Software                                   |Dependency                 |Project                    |
 |:------------------------------------------|:--------------------------|:--------------------------|
-|[Microsoft Visual Studio Community](https://www.visualstudio.com/vs/whatsnew/)|Solution|VSTO|
+|[Microsoft Visual Studio](https://www.visualstudio.com/vs/whatsnew/)|Solution|VSTO|
 |[Microsoft Office Developer Tools](https://visualstudio.microsoft.com/vs/features/office-tools/)|Solution|VSTO|
-|[Microsoft Excel 2010 (or later)](https://www.microsoft.com/en-au/software-download/office)|Project|VBA, VSTO|
+|[Microsoft Excel](https://www.microsoft.com/en-au/software-download/office)|Project|VBA, VSTO|
 |[Visual Basic for Applications](https://msdn.microsoft.com/en-us/vba/vba-language-reference)|Code|VBA|
 |[Extensible Markup Language (XML)](https://www.rondebruin.nl/win/s2/win001.htm)|Ribbon|VBA, VSTO|
 |[Snagit](http://discover.techsmith.com/snagit-non-brand-desktop/?gclid=CNzQiOTO09UCFVoFKgod9EIB3g)|Read Me|VBA, VSTO|
